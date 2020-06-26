@@ -89,7 +89,7 @@ sessionStorage.removeItem("activeUser")
 ## Database Structure and nomenclature
 Here is an example of what the database should look like.  Please ensure that variable names are identical to those listed below.
 How it works:
-Each user has a unique ID by which it can be associated to other tables.
+Each user has a unique ID by which it can be associated with other tables.
 Each table has a unique ID and a reference to an associated user via the user's id; this is represented by "userId".
 In the case of the "friends" table, each object is to be thought of as a relationship.  Each object, or "relationship", is represented with a unique ID.  The essence of the relationship is constructed by the "userId" and the "followingUserId", wherein the "userId" represents the user and the "followingUserId" represents the friend of the user. 
 In the example code below Jane, userId 3, is friends with both Billy, userId 2, and Bob, userId 1; consequently Billy and Bob are both friends with Jane. So in the first and second relationship object, in the "friends" table, userId 3 has a followingUserId of 2 in the relationship with the ID of 1 and followingUserId of 1 in the relationship with the ID of 2. Thus, Jane is friends with both Billy and Bob.
