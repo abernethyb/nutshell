@@ -1,6 +1,6 @@
 .articleContainer {
-    border: black solid 1px;
-    margin-top: 20px;
+    /* border: black solid 1px; */
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
 }
@@ -10,11 +10,16 @@
     padding-bottom: 0;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
-.article__title > h2 {
-    margin: 0;
+.article__title > h3 {
+    margin: 0 0 5px 0;
+    color: #373737;
+    font-weight: bold;
+}
+
+.article__addNew {
+    margin-left: 20px;
 }
 
 .articleLog {
@@ -22,6 +27,9 @@
     margin: 10px;
     display: flex;
     flex-direction: row;
+    /* justify-content: center; */
+    align-items: left;
+    flex-wrap: wrap;
 }
 
 .singleArticle {
@@ -29,23 +37,27 @@
     box-shadow: 2px 2px 4px #302e2ece;
     padding: 5px;
     width: 30%;
+    height: 200px;
+    margin: 0 15px 15px 0;
+    flex: 0 0 30%
 }
 
 .article__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 15px
 }
 
-.postUser {
-    font-size: 10px;
+.article__user {
+    font-size: 12px;
     color: grey;
     font-weight: bold;
     padding-top: 5px;
 }
 
 .article__date {
-    font-size: 10px;
+    font-size: 12px;
     font-style: italic;
     padding-top: 5px;
 }
@@ -53,4 +65,19 @@
 .article__delete {
     color: red;
     font-weight: bold;
+}
+
+.articleTitle > h3 {
+    padding-left: 10px;
+    margin: 20px 0 3px 0;
+}
+
+.articleTitle > h3 > a {
+    color: Black;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.article__description {
+    font-size: 14px;
 }

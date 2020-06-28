@@ -83,20 +83,21 @@
 .messageInput__container {
     display: flex;
     flex-direction: column;
-    background-color: slategray;
+    background-color: #373737;
     margin-top: 10px;
 }
 
 .messageInput__title > h3 {
-    margin: 10px 10px 0 10px;
+    margin: 5px 0 5px 10px;
+    color: whitesmoke;
 }
 
 .messageComposition__container {
     display: flex;
     flex-direction: row;
     background-color: white;
-    margin: 10px;
-    padding: 10px;
+    margin: 0 10px 10px;
+    padding: 5px;
     -moz-box-shadow:    inset 0 2px 2px #302e2e77;
     -webkit-box-shadow: inset 0 2px 2px #302e2e77;
     box-shadow:         inset 0 2px 2px #302e2e77;

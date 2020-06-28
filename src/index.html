@@ -12,9 +12,9 @@
 
     <!-- BANNER ELEMENT CONTAINER -->
     <article id="bannerContainer">
-        
+            <img src="/images/banner.jpg">
         <div class="banner__logo">
-
+            <img src="/images/myNutshell.png">
         </div>
 
     </article>
@@ -37,8 +37,30 @@
 
                 <!-- TASK CONTAINER -->
                 <div id="taskContainer">
+                    <div class="createTask">
+                        <form action="">
+                            <div class="row">
+                                <div class="fieldLabel">
+                                    <label for="date">Complete By</label>
+                                </div>
+                                <div class="field">
+                                    <input type="date" name="taskDate" id="taskDate">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="fieldLabel">
+                                    <label for="taskName">Task</label>
+                                </div>
+                                <div class="field">
+                                    <textarea id="taskName" name="taskName" placeholder="Write Here..."></textarea>
+                                </div>
+                            </div>
+                        <div class="createTask__saveBtn">
+                            <button id="saveTask" class="blueBtn" type="button">+ Task</button>
+                        </div>
+                    </div>
                     <div class="taskTitle">
-                        <h2>TASKS</h2>
+                        <h3>TASKS</h3>
                     </div>
                     <!-- THIS IS WHERE WE WILL POPULATE WITH HTML REPRESENTATIONS OF TASKS FROM DATABASE -->
                     <div class="taskLog">
@@ -50,7 +72,7 @@
                                     <p>Complete by: 7/2/2020</p>
                                 </div>
                                 <div class="taskDeleteButton">
-                                    <span class="task__delete">&times;</span>
+                                    <button id="deleteTaskBtn" class="deleteBtn" type="button">&times;</button>
                                 </div>
                             </div> 
                             <div class="taskBody">
@@ -69,7 +91,7 @@
                                     <p>Complete by: 7/3/2020</p>
                                 </div>
                                 <div class="taskDeleteButton">
-                                    <span class="task__delete">&times;</span>
+                                    <button id="deleteTaskBtn" class="deleteBtn" type="button">&times;</button>
                                 </div>
                             </div> 
                             <div class="taskBody">
@@ -181,7 +203,7 @@
             <div class="articleContainer">
                 <div class="articleContainer__header">
                     <div class="article__title">
-                        <h2>ARTICLES</h2>
+                        <h3>ARTICLES</h3>
                     </div>
                     <div class="article__addNew">
                         <div class="article__btnContainer">
@@ -193,23 +215,108 @@
                         <!-- SAMPLE ARTICLE HTML - START -->
                     <div id="article__${obj.id}" class="singleArticle">
                         <div class="article__header">
-                            <div class="postUser">
+                            <div class="article__user">
                                 AussholeWyatt
                             </div>
                             <div class="article__date">
                                 6/24/20
                             </div>
                             <div class="article__deleteButton">
-                                <span class="article__delete">&times;</span>
+                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
                             </div>
                         </div>
-                        <div class="article__title">
+                        <div class="articleTitle">
+                            <h3>
+                                <a href="${obj.url}" alt="${obj.title}">Florida Man Arrested</a>
+                            </h3>
+                        </div>
+                        <div class="article__description">
+                            <p>Local Florida man is arrested for operating motorized beer cooler while intoxicated.</p>
+                        </div>
+                    </div>
+
+                    <div id="article__${obj.id}" class="singleArticle">
+                        <div class="article__header">
+                            <div class="article__user">
+                                AussholeWyatt
+                            </div>
+                            <div class="article__date">
+                                6/24/20
+                            </div>
+                            <div class="article__deleteButton">
+                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                            </div>
+                        </div>
+                        <div class="articleTitle">
                             <h3>
                                 <a href="${obj.url}" alt="${obj.title}">Florida Man Arrested, Again</a>
                             </h3>
                         </div>
                         <div class="article__description">
-                            <p>Local Florida man is arrested for operating motorized beer cooler while intoxicated.</p>
+                            <p>Local Florida man released from jail, retreives motorized cooler from impound.</p>
+                        </div>
+                    </div>
+                    <div id="article__${obj.id}" class="singleArticle">
+                        <div class="article__header">
+                            <div class="article__user">
+                                AussholeWyatt
+                            </div>
+                            <div class="article__date">
+                                6/24/20
+                            </div>
+                            <div class="article__deleteButton">
+                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                            </div>
+                        </div>
+                        <div class="articleTitle">
+                            <h3>
+                                <a href="${obj.url}" alt="${obj.title}">Florida Man Drives Motorized Cooler into Gator Infested Swamp, Listed in Critical Condition</a>
+                            </h3>
+                        </div>
+                        <div class="article__description">
+                            <p>This was bound to happen...</p>
+                        </div>
+                    </div>
+                    <div id="article__${obj.id}" class="singleArticle">
+                        <div class="article__header">
+                            <div class="article__user">
+                                AussholeWyatt
+                            </div>
+                            <div class="article__date">
+                                6/24/20
+                            </div>
+                            <div class="article__deleteButton">
+                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                            </div>
+                        </div>
+                        <div class="articleTitle">
+                            <h3>
+                                <a href="${obj.url}" alt="${obj.title}">Florida Man Drives Motorized Cooler into Gator Infested Swamp, Listed in Critical Condition</a>
+                            </h3>
+                        </div>
+                        <div class="article__description">
+                            <p>This was bound to happen...</p>
+                        </div>
+                    </div>
+                    <div id="article__${obj.id}" class="singleArticle">
+                        <div class="article__header">
+                            <div class="article__user">
+                                AussholeWyatt
+                            </div>
+                            <div class="article__date">
+                                6/24/20
+                            </div>
+                            <div class="article__deleteButton">
+                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                            </div>
+                        </div>
+                        <div class="articleTitle">
+                            <h3>
+                                <a href="${obj.url}" alt="${obj.title}">Florida Man Drives Motorized Cooler into Gator Infested Swamp, Listed in Critical Condition</a>
+                            </h3>
+                        </div>
+                        <div class="article__description">
+                            <p>This was bound to happen...</p>
                         </div>
                     </div>
                         <!-- SAMPLE ARTICLE HTML - END -->
@@ -223,23 +330,29 @@
             <div class="eventsContainer">
                 <div class="eventsContainer__header">
                     <div class="eventsHeader__title">
-                        <h2>EVENTS</h2>
+                        <h3>EVENTS</h3>
                     </div>
                     <div class="eventsHeader__createBtn">
-                        <button id="addEventBtn" type="button">Add Event</button>
+                        <button id="addEventBtn" class="blueBtn" type="button">+ Event</button>
                     </div>
                 </div>
                 <div class="eventsContainer__eventsList">
 
                     <!-- EVENT SAMPLE HTML - START -->
-                    <div class="event__${obj.id}">
+                    <div id="event__${obj.id}" class="singleEvent">
                         <div class="event__header">
-                            <span class="event__delete">&times;</span>
+                        <div class="event__name">
+                            <h4>Beg for Food</h4>
+                            <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                            </div>    
                         </div>
                         <div class="event__details">
-                            <h3>${obj.eventName}</h3>
-                            <p>{obj.eventDate}</p>
-                            <p>${obj.eventLocation}</p>
+                            <dl>
+                                <dt>WHEN</dt>
+                                    <dd>7/2/2020</dd>
+                                <dt>WHERE</dt>
+                                    <dd>at the Dinner Table</dd>
+                            </dl>
                         </div>
                     </div>
                     <!-- EVENT SAMPLE HTML - END -->            
@@ -248,30 +361,31 @@
         </section>
 
         <!-- FRIENDS LIST - START -->
-        <!-- <section class="contentContainer__friendsFloat">
-            <div class="friendsContainer">
-                <div class="friendsContainer__header">
-                    <div class="friendsHeader__title">
-                        <h2>FRIENDS</h2>
-                    </div> -->
-                    
+        <section class="contentContainer__friendsFloat">   
+            <div class="friendsContainer__header">
+                <div class="friendsHeader__title">
+                    <h3>FRIENDS</h3>
+                </div>
+            <div class="friendsContainer">        
                     <!-- FRIEND SAMPLE HTML - START -->
-                    <!-- <div class="friend__${obj.id}">
-                        <div class="friend__profilePicture">
+                    <div id="friend__${obj.id}" class="singleFriend">
+                        <div class="friend__userDetails">
                             <img class="friend__UserImage" src="/images/userIcon.png" width="20px" height="20px">
-                        </div>
-                        <div class="friend__name">
-                            <p>${obj.userName}</p>
+                            <div class="friend__name">
+                                AussholeBosco
+                            </div>
                         </div>
                         <div class="friendsList__deleteBtn">
-                            <button id="deleteFriendBtn" type="button">X</button>
+                            <button id="deleteFriendBtn" class="deleteBtn" type="button">&times;</button>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- FRIEND SAMPLE HTML - END -->
                     
-                <!-- </div>
+                </div>
             </div>
-        </section>  -->
+
+            </div>
+        </section> 
         <!-- FRIENDS LIST - END -->
         
     </article>

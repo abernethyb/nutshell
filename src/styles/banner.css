@@ -1,5 +1,21 @@
-#bannerContainer {
+/* #bannerContainer {
     height: 100px;
     width: 100%;
     background-color: navy;
+} */
+
+#bannerContainer {
+    object-fit: cover;   
+    height: 100px;
+    width: 100%;
+    overflow: hidden;   
+}
+
+.banner__logo > img {
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 105px;
+    width: 180px;
+    height: auto;
 }

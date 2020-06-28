@@ -1,0 +1,34 @@
+.friendsHeader__title > h3 {
+    margin: 5px 0 5px 10px;
+    color: whitesmoke;
+}
+
+.friendsContainer__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.friendsContainer {
+    background-color: whitesmoke;
+    margin: 0 5px 20px;
+}
+
+.singleFriend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.friend__userDetails {
+    display: flex;
+    flex-direction: row;
+}
+
+.friend__userImage {
+    padding-top: 5px;
+}
+
+.friend__name {
+    padding-left: 10px;
+}
