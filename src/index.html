@@ -6,11 +6,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles/main.css">
-    <title>Document</title>
+    <title>MyNutshell</title>
 </head>
-
 <body>
-    <article id="container"></article>
+
+    <!-- BANNER ELEMENT CONTAINER -->
+    <article id="bannerContainer">
+        <div class="banner__background">
+
+        </div>
+        <div class="banner__logo">
+
+        </div>
+
+    </article>
+
+    <!-- CONTENT CONTAINER -->
+    <article id="contentContainer">    
+        <section class="contentContainer__left">
+            <!-- SIDEBAR -->
+            <div id="sidebar">
+                <div class="userContainer">
+                    <!-- USERNAME AND IMG SAMPLE HTML - START -->
+                    <div class="user__profilePicture">
+                        <img class="mainUserImage" src="/images/userIcon.png" width="100px" height="100px">
+                    </div>
+                    <div class="user__userName">
+                        <p>${obj.userName}</p>
+                    </div>
+                    <!-- USERNAME AND IMD SAMPLE HTML - END  -->
+                </div>
+
+                <!-- TASK CONTAINER -->
+                <div id="taskContainer">
+                    <div class="taskTitle">
+                        <h2>TASKS</h2>
+                    </div>
+                    <!-- THIS IS WHERE WE WILL POPULATE WITH HTML REPRESENTATIONS OF TASKS FROM DATABASE -->
+                    <div class="taskLog">
+
+                        <!-- SAMPLE TASK HTML - TO BE REMOVED FROM HARDCODE-->
+                        <div class="task__id">
+                            <div class="task__checkBox">
+                                <!-- RESEARCH HOW TO MAKE AN INTERACTIVE CHECKBOX - FLOAT LEFT -->
+                            </div>
+                            <div class="task__description">
+                                <h3>${obj.taskName}</h3>
+                                <p>${obj.taskCompletionDate}</p>
+                            </div>   
+                            <div class="task__deleteButton">
+                                <!-- SIMPLE X IN UPPER RIGHT CORNER OF TASK BOX - FLOAT RIGHT -->
+                            </div> 
+                        </div>
+                        <!-- END SAMPLE TASK HTML -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- STORES CHAT LOG, CHAT INPUT, AND ARTICLE ELEMENTS -->
+        <section class="contentContainer__middle">
+
+            <!-- CHAT CONTAINER -->
+            <div id="chat__container">
+                    <h2>MESSAGES</h2>                 
+                <div class="chatLog">
+                    <!-- SAMPLE CHAT HTML - TO BE REMOVED FROM HARDCODE-->
+                    <div class="chat__${obj.id}">
+                        <div class="chatFloat__left">
+                            <div class="chat__profilePicture">
+                                <img class="chat__userImage" src="/images/userIcon.png" width="50px" height="50px">
+                            </div>
+                        </div>
+                        <div class="chatFloat__middle">
+                            <div class="chatAbove__userName">
+                                <p>${obj.userName}</p>
+                            </div>
+                            <div class="chatBelow__message">
+                                <p class="chat__text">
+                                    ${obj.message}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="chatFloat__right">
+                            <div class="chat__date">
+                                <div class="chatDate__container">
+                                    <p class="chatData__text">${obj.date}</p>
+                                </div>
+                            </div>
+                            <div class="chat__buttonContainer">
+                                <div class="chatButton__container">
+                                    <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
+                                    <button id="deleteChat__${obj.id}" class="chat__deleteBtn" type="button">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SAMPLE CHAT HTML - END -->
+                </div>
+            </div>
+            <!-- CHAT LOG CONTAINER - END -->
+
+            <!-- CHAT INPUT - START -->
+            <div class="messageInput__container">
+                <div class="messageInput__title">
+                    <h2>WRITE A MESSAGE</h2>
+                </div>
+                <div class="messageInput__profilePicture">
+                    <img class="messageInput__UserImage" src="/images/userIcon.png" width="50px" height="50px">
+                </div>
+                <div class="messageInput__compose">
+                        <textarea id="composeEntry" name="composeEntry" placeholder="Write a new message..."></textarea>
+                </div>
+                <div class="messageInput__button">
+                    <button id="postMessageBtn" type="button">POST</button>
+                </div>    
+            </div>
+            <!-- CHAT INPUT - END -->
+
+            <!-- ARTICLES CONTAINER - START -->
+            <div class="articleContainer">
+                <div class="articleContainer__header">
+                    <div class="article__title">
+                        <h2>ARTICLES</h2>
+                    </div>
+                    <div class="article__addNew">
+                        <div class="article__btnContainer">
+                            <button id="article__addNewBtn" type="button">Add Article</button>
+                        </div>
+                    </div>
+                   
+                    <div class="articleLog">
+                         <!-- SAMPLE ARTICLE HTML - START -->
+                        <div class="article__$"${obj.id}>
+                            <div class="article__header">
+                                <div class="article__date">
+                                    <p>${obj.date}</p>
+                                </div>
+                                <div class="article__delete">
+                                    <button id="article__deleteBtn" type="button">X</button>
+                                </div>
+                            </div>
+                            <div class="article__title">
+                                <h3>
+                                    <a href="${obj.url}" alt="${obj.title}">${obj.title}</a>
+                                </h3>
+                            </div>
+                            <div class="article__description">
+                                <p>${obj.description}</p>
+                            </div>
+                        </div>
+                         <!-- SAMPLE ARTICLE HTML - END -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ARTICLES CONTAINER - END -->
+
+        <!-- EVENTS CONTAINER - START -->
+        <section class="contentContainer__right">
+            <div class="eventsContainer">
+                <div class="eventsContainer__header">
+                    <div class="eventsHeader__title">
+                        <h2>EVENTS</h2>
+                    </div>
+                    <div class="eventsHeader__createBtn">
+                        <button id="addEventBtn" type="button">Add Event</button>
+                    </div>
+                </div>
+                <div class="eventsContainer__eventsList">
+
+                    <!-- EVENT SAMPLE HTML - START -->
+                    <div class="event__${obj.id}">
+                        <div class="event__header">
+                            <button id="deleteEventBtn" type="button">Delete Event</button>
+                        </div>
+                        <div class="event__details">
+                            <h3>${obj.eventName}</h3>
+                            <p>{obj.eventDate}</p>
+                            <p>${obj.eventLocation}</p>
+                        </div>
+                    </div>
+                    <!-- EVENT SAMPLE HTML - END -->            
+                </div>
+            </div>
+        </section>
+
+        <!-- FRIENDS LIST - START -->
+        <section class="contentContainer__friendsFloat">
+            <div class="friendsContainer">
+                <div class="friendsContainer__header">
+                    <div class="friendsHeader__title">
+                        <h2>FRIENDS</h2>
+                    </div>
+                    <div class="friend__${obj.id}">
+                        <div class="friend__profilePicture">
+                            <img class="friend__UserImage" src="/images/userIcon.png" width="20px" height="20px">
+                        </div>
+                        <div class="friend__name">
+                            <p>${obj.userName}</p>
+                        </div>
+                        <div class="friendsList__deleteBtn">
+                            <button id="deleteFriendBtn" type="button">X</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- FRIENDS LIST - END -->
+        <footer>
+            <p>Created by The Grave And The Rose</p>
+        </footer>
+    </article>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>
