@@ -1,0 +1,56 @@
+.articleContainer {
+    border: black solid 1px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.articleContainer__header {
+    padding: 10px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.article__title > h2 {
+    margin: 0;
+}
+
+.articleLog {
+    background-color: whitesmoke;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.singleArticle {
+    background-color: silver;
+    box-shadow: 2px 2px 4px #302e2ece;
+    padding: 5px;
+    width: 30%;
+}
+
+.article__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.postUser {
+    font-size: 10px;
+    color: grey;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.article__date {
+    font-size: 10px;
+    font-style: italic;
+    padding-top: 5px;
+}
+
+.article__delete {
+    color: red;
+    font-weight: bold;
+}

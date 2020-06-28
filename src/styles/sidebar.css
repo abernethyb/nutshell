@@ -1,0 +1,115 @@
+.contentContainer__left {
+    position: relative;
+    height: 100%;
+    top: -60px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.userContainer {
+    /* border: 1px dashed black; */
+    align-items: center;
+    padding: 20px;
+    background-color: #373737;
+    box-shadow: 3px 3px 8px #302e2ece;
+    width: 80%;
+}
+
+.user__profilePicture {
+    text-align: center;
+}
+
+.mainUserImage {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+}
+
+.user__userName {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-family: 'open sans', sans-serif
+}
+
+sup {
+    color: limegreen;
+    font-size: 18px;
+}
+
+.user__userName > p {
+    font-size: 16px;
+}
+
+#taskContainer {
+    margin-top: 20px;
+    background-color: lightgrey;
+    height: 100%;
+    box-shadow: 2px 2px 4px #302e2ece;
+}
+
+.taskTitle > h2 {
+    padding: 5px 10px;
+    margin: 10px 0;
+}
+
+.singleTask {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10px;
+    text-align: left;
+    overflow: wrap;
+}
+
+.task__header {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    justify-content: space-between;
+    padding: 3px 10px;
+}
+
+.completeBy > p {
+    font-size: 11px;
+    color: grey;
+    font-style: italic;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.taskDeleteButton {
+    color: grey;
+    font-style: bold;
+    text-align: right;
+}
+
+.taskBody {
+    display: flex;
+    flex-direction: row;
+    padding: 3px 10px;
+}
+
+.task__checkbox {
+    margin-right: 5px;
+}
+
+.task__description {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.task__description > h3 {
+    margin: 3px 5px 3px 0;
+    font-size: 13px;
+}
+
+
+

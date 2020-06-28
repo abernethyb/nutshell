@@ -1,0 +1,137 @@
+#chat__container {
+    padding: 5px;
+    background-color: #373737;
+}
+
+#chat__container > h3 {
+    margin: 0 0 5px 0;
+    color: whitesmoke;
+}
+
+.chatLog {
+    background-color: white;
+    padding: 10px;
+    height: 150px;
+    overflow: scroll;
+}
+
+/* SCROLLBAR */
+/* width */
+.chatLog::-webkit-scrollbar {
+    width: 6px;
+}
+  
+  /* Track */
+.chatLog::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+  /* Handle */
+.chatLog::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+.chatLog::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.singleChat {
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.chatFloat__left {
+    float: left
+}
+
+.chat__userImage {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.chatFloat__middle {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    float: left;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.chatAbove__userName > h4, p {
+    margin: 0 5px 5px 10px;
+    padding-top: 5px;
+}
+
+.chatFloat__right {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    text-align: right;
+    margin-right: 10px;
+    width: 30%;
+}
+
+
+
+.messageInput__container {
+    display: flex;
+    flex-direction: column;
+    background-color: slategray;
+    margin-top: 10px;
+}
+
+.messageInput__title > h3 {
+    margin: 10px 10px 0 10px;
+}
+
+.messageComposition__container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    -moz-box-shadow:    inset 0 2px 2px #302e2e77;
+    -webkit-box-shadow: inset 0 2px 2px #302e2e77;
+    box-shadow:         inset 0 2px 2px #302e2e77;
+}
+
+.messageInput__userImage {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.messageInput__compose {
+    width: 75%;
+}
+
+textarea {
+    width: 95%;
+    height: 50px;
+    padding: 5px 5px 10px 10px;
+    resize: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.messageInput__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: auto;
+    
+}
+

@@ -12,9 +12,7 @@
 
     <!-- BANNER ELEMENT CONTAINER -->
     <article id="bannerContainer">
-        <div class="banner__background">
-
-        </div>
+        
         <div class="banner__logo">
 
         </div>
@@ -29,10 +27,10 @@
                 <div class="userContainer">
                     <!-- USERNAME AND IMG SAMPLE HTML - START -->
                     <div class="user__profilePicture">
-                        <img class="mainUserImage" src="/images/userIcon.png" width="100px" height="100px">
+                        <img class="mainUserImage" src="/images/wyatt.png">
                     </div>
                     <div class="user__userName">
-                        <p>${obj.userName}</p>
+                        <p>AussholeWyatt <sup>&#8226;</sup></p>
                     </div>
                     <!-- USERNAME AND IMD SAMPLE HTML - END  -->
                 </div>
@@ -46,17 +44,42 @@
                     <div class="taskLog">
 
                         <!-- SAMPLE TASK HTML - TO BE REMOVED FROM HARDCODE-->
-                        <div class="task__id">
-                            <div class="task__checkBox">
-                                <!-- RESEARCH HOW TO MAKE AN INTERACTIVE CHECKBOX - FLOAT LEFT -->
-                            </div>
-                            <div class="task__description">
-                                <h3>${obj.taskName}</h3>
-                                <p>${obj.taskCompletionDate}</p>
-                            </div>   
-                            <div class="task__deleteButton">
-                                <!-- SIMPLE X IN UPPER RIGHT CORNER OF TASK BOX - FLOAT RIGHT -->
+                        <div id="task__id" class="singleTask">
+                            <div class="task__header">
+                                <div class="completeBy">
+                                    <p>Complete by: 7/2/2020</p>
+                                </div>
+                                <div class="taskDeleteButton">
+                                    <span class="task__delete">&times;</span>
+                                </div>
                             </div> 
+                            <div class="taskBody">
+                                <div class="task__checkbox">
+                                    <input type="checkbox" class="checkbox">
+                                </div>
+                                <div class="task__description">
+                                    <h3>Piss on couch in the bonus room</h3>
+                                </div>   
+                            </div>
+                        </div>
+
+                        <div id="task__id" class="singleTask">
+                            <div class="task__header">
+                                <div class="completeBy">
+                                    <p>Complete by: 7/3/2020</p>
+                                </div>
+                                <div class="taskDeleteButton">
+                                    <span class="task__delete">&times;</span>
+                                </div>
+                            </div> 
+                            <div class="taskBody">
+                                <div class="task__checkbox">
+                                    <input type="checkbox" class="checkbox">
+                                </div>
+                                <div class="task__description">
+                                    <h3>Get into the trash and eat last nights scraps</h3>
+                                </div>   
+                            </div>
                         </div>
                         <!-- END SAMPLE TASK HTML -->
                     </div>
@@ -70,35 +93,62 @@
 
             <!-- CHAT CONTAINER -->
             <div id="chat__container">
-                    <h2>MESSAGES</h2>                 
+                    <h3>MESSAGES</h3>                 
                 <div class="chatLog">
                     <!-- SAMPLE CHAT HTML - TO BE REMOVED FROM HARDCODE-->
-                    <div class="chat__${obj.id}">
+                    <div id="chat__${obj.id}" class="singleChat">
                         <div class="chatFloat__left">
                             <div class="chat__profilePicture">
-                                <img class="chat__userImage" src="/images/userIcon.png" width="50px" height="50px">
+                                <img class="chat__userImage" src="/images/wyatt.png">
                             </div>
                         </div>
                         <div class="chatFloat__middle">
                             <div class="chatAbove__userName">
-                                <p>${obj.userName}</p>
+                                <h4>AussholeWyatt</h4>
                             </div>
                             <div class="chatBelow__message">
                                 <p class="chat__text">
-                                    ${obj.message}
+                                    Owner stepped away from the table. I grabbed the porkchop off his plate before he got back. He blamed Bosco.
                                 </p>
                             </div>
                         </div>
                         <div class="chatFloat__right">
                             <div class="chat__date">
                                 <div class="chatDate__container">
-                                    <p class="chatData__text">${obj.date}</p>
+                                    <p class="chatData__text">6/28/20</p>
                                 </div>
                             </div>
                             <div class="chat__buttonContainer">
-                                <div class="chatButton__container">
+                                <div class="chatEditButton">
                                     <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
+                                </div>
+                                <div class="chatDeleteButton">
                                     <button id="deleteChat__${obj.id}" class="chat__deleteBtn" type="button">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="chat__${obj.id}" class="singleChat">
+                        <div class="chatFloat__left">
+                            <div class="chat__profilePicture">
+                                <img class="chat__userImage" src="/images/bosco.png">
+                            </div>
+                        </div>
+                        <div class="chatFloat__middle">
+                            <div class="chatAbove__userName">
+                                <h4>AussholeBosco</h4>
+                            </div>
+                            <div class="chatBelow__message">
+                                <p class="chat__text">
+                                    Thanks for letting me take the fall on that, ausshole. I was crated for the rest of the night because of you!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="chatFloat__right">
+                            <div class="chat__date">
+                                <div class="chatDate__container">
+                                    <p class="chatData__text">6/28/20</p>
                                 </div>
                             </div>
                         </div>
@@ -111,16 +161,18 @@
             <!-- CHAT INPUT - START -->
             <div class="messageInput__container">
                 <div class="messageInput__title">
-                    <h2>WRITE A MESSAGE</h2>
+                    <h3>WRITE A MESSAGE</h3>
                 </div>
-                <div class="messageInput__profilePicture">
-                    <img class="messageInput__UserImage" src="/images/userIcon.png" width="50px" height="50px">
-                </div>
-                <div class="messageInput__compose">
-                        <textarea id="composeEntry" name="composeEntry" placeholder="Write a new message..."></textarea>
-                </div>
-                <div class="messageInput__button">
-                    <button id="postMessageBtn" type="button">POST</button>
+                <div class="messageComposition__container">
+                    <div class="messageInput__profilePicture">
+                        <img class="messageInput__userImage" src="/images/wyatt.png">
+                    </div>
+                    <div class="messageInput__compose">
+                            <textarea id="composeEntry" name="composeEntry" placeholder="Write a new message..."></textarea>
+                    </div>
+                    <div class="messageInput__button">
+                        <button id="postMessageBtn" class="blueBtn" type="button">Send</button>
+                    </div>
                 </div>    
             </div>
             <!-- CHAT INPUT - END -->
@@ -133,32 +185,34 @@
                     </div>
                     <div class="article__addNew">
                         <div class="article__btnContainer">
-                            <button id="article__addNewBtn" type="button">Add Article</button>
+                            <button id="article__addNewBtn" class="blueBtn" type="button">+ Article</button>
                         </div>
                     </div>
-                   
-                    <div class="articleLog">
-                         <!-- SAMPLE ARTICLE HTML - START -->
-                        <div class="article__$"${obj.id}>
-                            <div class="article__header">
-                                <div class="article__date">
-                                    <p>${obj.date}</p>
-                                </div>
-                                <div class="article__delete">
-                                    <button id="article__deleteBtn" type="button">X</button>
-                                </div>
+                </div>
+                <div class="articleLog">
+                        <!-- SAMPLE ARTICLE HTML - START -->
+                    <div id="article__${obj.id}" class="singleArticle">
+                        <div class="article__header">
+                            <div class="postUser">
+                                AussholeWyatt
                             </div>
-                            <div class="article__title">
-                                <h3>
-                                    <a href="${obj.url}" alt="${obj.title}">${obj.title}</a>
-                                </h3>
+                            <div class="article__date">
+                                6/24/20
                             </div>
-                            <div class="article__description">
-                                <p>${obj.description}</p>
+                            <div class="article__deleteButton">
+                                <span class="article__delete">&times;</span>
                             </div>
                         </div>
-                         <!-- SAMPLE ARTICLE HTML - END -->
+                        <div class="article__title">
+                            <h3>
+                                <a href="${obj.url}" alt="${obj.title}">Florida Man Arrested, Again</a>
+                            </h3>
+                        </div>
+                        <div class="article__description">
+                            <p>Local Florida man is arrested for operating motorized beer cooler while intoxicated.</p>
+                        </div>
                     </div>
+                        <!-- SAMPLE ARTICLE HTML - END -->
                 </div>
             </div>
         </section>
@@ -180,7 +234,7 @@
                     <!-- EVENT SAMPLE HTML - START -->
                     <div class="event__${obj.id}">
                         <div class="event__header">
-                            <button id="deleteEventBtn" type="button">Delete Event</button>
+                            <span class="event__delete">&times;</span>
                         </div>
                         <div class="event__details">
                             <h3>${obj.eventName}</h3>
@@ -194,13 +248,15 @@
         </section>
 
         <!-- FRIENDS LIST - START -->
-        <section class="contentContainer__friendsFloat">
+        <!-- <section class="contentContainer__friendsFloat">
             <div class="friendsContainer">
                 <div class="friendsContainer__header">
                     <div class="friendsHeader__title">
                         <h2>FRIENDS</h2>
-                    </div>
-                    <div class="friend__${obj.id}">
+                    </div> -->
+                    
+                    <!-- FRIEND SAMPLE HTML - START -->
+                    <!-- <div class="friend__${obj.id}">
                         <div class="friend__profilePicture">
                             <img class="friend__UserImage" src="/images/userIcon.png" width="20px" height="20px">
                         </div>
@@ -210,16 +266,18 @@
                         <div class="friendsList__deleteBtn">
                             <button id="deleteFriendBtn" type="button">X</button>
                         </div>
-                    </div>
+                    </div> -->
+                    <!-- FRIEND SAMPLE HTML - END -->
                     
-                </div>
+                <!-- </div>
             </div>
-        </section>
+        </section>  -->
         <!-- FRIENDS LIST - END -->
-        <footer>
-            <p>Created by The Grave And The Rose</p>
-        </footer>
+        
     </article>
+    <!-- <footer>
+            <p>Created by The Grave And The Rose</p>
+        </footer> -->
     <script type="module" src="./scripts/main.js"></script>
 </body>
 
