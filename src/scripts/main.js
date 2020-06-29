@@ -1,5 +1,6 @@
 import { API, dbResponseData } from "./databaseCalls.js"
 import newArticle from "./articles/articleFactory.js"
+import renderArticle from "./articles/articleDOM.js"
 
 console.log('Hello World')
 
@@ -26,3 +27,5 @@ let testArticle = newArticle(2, "articleTest2", "another test of article functio
 
 //url, table, newObject
 API.postData("http://localhost:3000", "articles", testArticle)
+
+renderArticle()
