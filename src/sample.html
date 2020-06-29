@@ -1,24 +1,27 @@
 // USE THESE SAMPLES IN JS HTML CONVERTERS
 
+// WHERE EVER THERE IS BOTH AN ID AND A CLASS FOR A SINGLE DIV...
+//...IDS ARE DESIGNED TO HOLD INTERPOLATIONS OF UNIQUE IDENTIFIERS WHILE CLASSES ARE USED FOR CSS PURPOSES.
+
 
 <!-- USER INFO DISPLAY HTML -->
 <div class="user__profilePicture">
-    <img class="mainUserImage" src="/images/userIcon.png">
+    <img class="mainUserImage" src="${user.image}">
 </div>
 <div class="user__userName">
-    <p>${obj.userName} <sup>&#8226;</sup></p>
+    <p>${users.userName} <sup>&#8226;</sup></p>
 </div>
 
 
 
 <!-- USER TASK DISPLAY -->
-<div id="task__${obj.id}" class="singleTask">
+<div id="task__${tasks.id}" class="singleTask">
     <div class="task__header">
         <div class="completeBy">
-            <p>Complete by: ${obj.completeByDate}</p>
+            <p>Complete by: ${tasks.expectedCompletionDate}</p>
         </div>
         <div class="taskDeleteButton">
-            <span class="task__delete">&times;</span>
+            <button id="deleteTaskBtn" class="deleteBtn" type="button">&times;</button>
         </div>
     </div> 
     <div class="taskBody">
@@ -26,42 +29,41 @@
             <input type="checkbox" class="checkbox">
         </div>
         <div class="task__description">
-            <h3>${obj.taskName}</h3>
+            <h3>${tasks.title}</h3>
         </div>   
     </div>
 </div>
 
+// NOTE: USE TASK CHECKBOX TO TOGGLE THE TASKS.COMPLETE BOOLEAN.
+
 
 
 <!-- CHAT LOG MESSAGE DISPLAY -->
-<div id="chat__${obj.id}" class="singleChat">
+<div id="chat__${messages.id}" class="singleChat">
     <div class="chatFloat__left">
         <div class="chat__profilePicture">
-            <img class="chat__userImage" src="/images/userIcon.png">
+            <img class="chat__userImage" src="${users.userImage}">
         </div>
     </div>
     <div class="chatFloat__middle">
         <div class="chatAbove__userName">
-            <h4>${obj.userName}</h4>
+            <h4>${users.username}</h4>
         </div>
         <div class="chatBelow__message">
             <p class="chat__text">
-                ${obj.message}
+                ${messages.content}
             </p>
         </div>
     </div>
     <div class="chatFloat__right">
         <div class="chat__date">
             <div class="chatDate__container">
-                <p class="chatData__text">${obj.date}</p>
+                <p class="chatData__text">${messages.date}</p>
             </div>
         </div>
         <div class="chat__buttonContainer">
             <div class="chatEditButton">
-                <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
-            </div>
-            <div class="chatDeleteButton">
-                <button id="deleteChat__${obj.id}" class="chat__deleteBtn" type="button">Delete</button>
+                <button id="editChat__${messages.id}" class="chat__editBtn" type="button">Edit</button>
             </div>
         </div>
     </div>
@@ -70,22 +72,25 @@
 
 
 <!-- ARTICLE HTML DISPLAY -->
-<div class="article__$"${obj.id}>
+<div id="article__${obj.id}" class="singleArticle">
     <div class="article__header">
+        <div class="article__user">
+            ${users.username}
+        </div>
         <div class="article__date">
-            <p>${obj.date}</p>
+            ${articles.date}
         </div>
         <div class="article__deleteButton">
-            <span class="article__delete">&times;</span>
+            <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
         </div>
     </div>
-    <div class="article__title">
+    <div class="articleTitle">
         <h3>
-            <a href="${obj.url}" alt="${obj.title}">${obj.title}</a>
+            <a href="${articles.url}" alt="${articles.title}">${articles.title}</a>
         </h3>
     </div>
     <div class="article__description">
-        <p>${obj.description}</p>
+        <p>${articles.description}</p>
     </div>
 </div>
 
