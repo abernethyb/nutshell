@@ -21,11 +21,11 @@ API.getData("http://localhost:3000", "articles", "user").then(
 )
 
 
-//Brendan here testing article factory and post method
-//userId, title, description, url, date
-let testArticle = newArticle(2, "articleTest2", "another test of article functionality", "https://www.theonion.com/study-finds-gap-widening-between-rich-pets-and-poor-ame-1844134668", "2020-06-29")
+// //Brendan here testing article factory and post method
+// //userId, title, description, url, date
+// let testArticle = newArticle(2, "articleTest2", "another test of article functionality", "https://www.theonion.com/study-finds-gap-widening-between-rich-pets-and-poor-ame-1844134668", "2020-06-29")
 
-//url, table, newObject
-API.postData("http://localhost:3000", "articles", testArticle)
+// //url, table, newObject
+// API.postData("http://localhost:3000", "articles", testArticle)
 
 renderArticle()

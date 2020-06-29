@@ -12,7 +12,7 @@ const renderArticle = () => {
                 (res) => {
                     console.log(res)
                         document.querySelector(".article__output").innerHTML += `
-                    <div id="article__$./fixlater{obj.id}" class="singleArticle">
+                    <div id="article__${res.id}" class="singleArticle">
                         <div class="article__header">
                             <div class="article__user">
                                 ${res.user.username}
@@ -26,7 +26,7 @@ const renderArticle = () => {
                         </div>
                         <div class="articleTitle">
                             <h3>
-                                <a href="$./fixlater{obj.id}" alt="$./fixlater{obj.id}">Florida Man Arrested</a>
+                                <a href="${res.id}" alt="$./fixlater{obj.id}">Florida Man Arrested</a>
                             </h3>
                         </div>
                         <div class="article__description">
