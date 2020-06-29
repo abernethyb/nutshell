@@ -1,24 +1,27 @@
 // USE THESE SAMPLES IN JS HTML CONVERTERS
 
+// WHERE EVER THERE IS BOTH AN ID AND A CLASS FOR A SINGLE DIV...
+//...IDS ARE DESIGNED TO HOLD INTERPOLATIONS OF UNIQUE IDENTIFIERS WHILE CLASSES ARE USED FOR CSS PURPOSES.
+
 
 <!-- USER INFO DISPLAY HTML -->
 <div class="user__profilePicture">
     <img class="mainUserImage" src="/images/userIcon.png">
 </div>
 <div class="user__userName">
-    <p>${obj.userName} <sup>&#8226;</sup></p>
+    <p>${users.userName} <sup>&#8226;</sup></p>
 </div>
 
 
 
 <!-- USER TASK DISPLAY -->
-<div id="task__${obj.id}" class="singleTask">
+<div id="task__${tasks.id}" class="singleTask">
     <div class="task__header">
         <div class="completeBy">
-            <p>Complete by: ${obj.completeByDate}</p>
+            <p>Complete by: ${tasks.expectedCompletionDate}</p>
         </div>
         <div class="taskDeleteButton">
-            <span class="task__delete">&times;</span>
+            <button id="deleteTask__${obj.id}" class="deleteBtn" type="button">&times;</button>
         </div>
     </div> 
     <div class="taskBody">
@@ -26,10 +29,12 @@
             <input type="checkbox" class="checkbox">
         </div>
         <div class="task__description">
-            <h3>${obj.taskName}</h3>
+            <h3>${tasks.title}</h3>
         </div>   
     </div>
 </div>
+
+// NOTE: USE TASK CHECKBOX TO TOGGLE THE TASKS.COMPLETE BOOLEAN.
 
 
 
@@ -42,11 +47,11 @@
     </div>
     <div class="chatFloat__middle">
         <div class="chatAbove__userName">
-            <h4>${obj.userName}</h4>
+            <h4>${obj.users.username}</h4>
         </div>
         <div class="chatBelow__message">
             <p class="chat__text">
-                ${obj.message}
+                ${obj.content}
             </p>
         </div>
     </div>
@@ -60,9 +65,6 @@
             <div class="chatEditButton">
                 <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
             </div>
-            <div class="chatDeleteButton">
-                <button id="deleteChat__${obj.id}" class="chat__deleteBtn" type="button">Delete</button>
-            </div>
         </div>
     </div>
 </div>
@@ -70,18 +72,21 @@
 
 
 <!-- ARTICLE HTML DISPLAY -->
-<div class="article__$"${obj.id}>
+<div id="article__${obj.id}" class="singleArticle">
     <div class="article__header">
+        <div class="article__user">
+            ${obj.users.username}
+        </div>
         <div class="article__date">
-            <p>${obj.date}</p>
+            ${obj.date}
         </div>
         <div class="article__deleteButton">
-            <span class="article__delete">&times;</span>
+            <button id="deleteArticle__${obj.id}" class="deleteBtn" type="button">&times;</button>
         </div>
     </div>
-    <div class="article__title">
+    <div class="articleTitle">
         <h3>
-            <a href="${obj.url}" alt="${obj.title}">${obj.title}</a>
+            <a href="${articles.url}" alt="${articles.title}">${obj.title}</a>
         </h3>
     </div>
     <div class="article__description">
@@ -92,28 +97,36 @@
 
 
 <!-- EVENT HTML DISPLAY -->
-<div class="event__${obj.id}">
+<div id="event__${obj.id}" class="singleEvent">
     <div class="event__header">
-        <span class="event__delete">&times;</span>
+    <div class="event__name">
+        <h4>${obj.title}</h4>
+        <button id="deleteEvent__${obj.id}" class="deleteBtn" type="button">&times;</button>
+        </div>    
     </div>
     <div class="event__details">
-        <h3>${obj.eventName}</h3>
-        <p>{obj.eventDate}</p>
-        <p>${obj.eventLocation}</p>
+        <dl>
+            <dt>HOST</dt>
+                <dd>${obj.user.userId}</dd>
+            <dt>WHEN</dt>
+                <dd>${obj.date}</dd>
+            <dt>WHERE</dt>
+                <dd>${obj.location}</dd>
+        </dl>
     </div>
 </div>
 
 
 
 <!-- FRIEND HTML DISPLAY -->
-<div class="friend__${obj.id}">
-    <div class="friend__profilePicture">
-        <img class="friend__UserImage" src="/images/userIcon.png">
-    </div>
-    <div class="friend__name">
-        <p>${obj.userName}</p>
+<div id="friend__${obj.id}" class="singleFriend">
+    <div class="friend__userDetails">
+        <img class="friend__userImage" src="/images/userIcon.png">
+        <div class="friend__name">
+            ${obj.userId}
+        </div>
     </div>
     <div class="friendsList__deleteBtn">
-        <button id="deleteFriendBtn" type="button">X</button>
+        <button id="deleteFriend__${obj.id}" class="deleteBtn" type="button">&times;</button>
     </div>
 </div>
