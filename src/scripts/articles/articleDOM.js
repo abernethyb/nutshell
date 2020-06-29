@@ -11,7 +11,7 @@ const renderArticle = () => {
             dbResponseData.forEach(
                 (res) => {
                     console.log(res)
-                        document.querySelector(".article__output").innerHTML += `
+                        document.querySelector(".articleLog").innerHTML += `
                     <div id="article__${res.id}" class="singleArticle">
                         <div class="article__header">
                             <div class="article__user">
