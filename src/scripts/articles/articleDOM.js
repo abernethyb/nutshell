@@ -2,12 +2,13 @@
 import { API, dbResponseData } from "../databaseCalls.js"
 
 
-
+//function to render articles to DOM
 const renderArticle = () => {
-
+    //fetch call to get most recent data
     API.getData("http://localhost:3000", "articles", "user").then(
     () => {
         console.log("hello from articleDOM! Hello?"),
+        //loop to iterate through database response
             dbResponseData.forEach(
                 (res) => {
                     console.log(res)
