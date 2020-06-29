@@ -2,13 +2,15 @@
 import API from "../databaseCalls.js";
 import sessionData from "./sessionStorage.js"
 
-export default {
+const loginCalls = {
     login(username, password) {
         API.getAllUsers()
             .then (users => users.find(user => {
                 if(user.password === password && user.username === username){
                     sessionData.storeUser(user.id)
                     console.log(user)
+                    console.log(username)
+                    console.log(password)
                 }
             }))
     },
@@ -34,3 +36,5 @@ export default {
             })
     }
 }
+
+export default loginCalls;

@@ -1,6 +1,5 @@
 import API from "./databaseCalls.js";
 import includeHTML from "./users/includeHTML.js";
-import loginButtons from "./users/loginButtons.js"
 
 
 //ref w3 includeHTML 
@@ -13,11 +12,6 @@ let activeUser = false;
         includeHTML(main,"login.html","file");
 } 
 //Do I need an else statement???
-
-
-// loginButtons.login()
-// loginButtons.register()
-
 
 
 // invocing the fetch call from database calls to test it...Brendan
