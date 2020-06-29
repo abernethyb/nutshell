@@ -10,7 +10,7 @@ Note: This dashboard is not for the fainthearted. There's a difference between u
 1. Clone this repository
 1. `cd` into the directory it creates
 1. Make a `database.json` file in the `api` directory
-1. Serve the JSON file database.json utilizing the json-server -p 8088 -w database.json in terminal. Note: you must have npm installed.
+1. Serve the JSON file database.json utilizing the json-server -p 3000 -w database.json in terminal. Note: you must have npm installed.
 1. Now serve main.js in scripts directory. 
 1. Open google chrome web browser and go to the port that you have served the site to. You should be seeing the webpage at this point in chrome. 
 1. Register and begin your journey in the world of free flowing information. 

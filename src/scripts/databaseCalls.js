@@ -1,5 +1,5 @@
 //url to json server NOTE: Make sure to add slash after to dig deeper
-const url="http://localhost:8088"
+const url="http://localhost:3000"
 
 //calls for everything
 
