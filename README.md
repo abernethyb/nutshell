@@ -18,8 +18,17 @@ Note: This dashboard is not for the fainthearted. There's a difference between u
 
 > **Note:** Your `database.json` file is already in the `.gitignore` file for this project, so it will never be added to the repo or pushed to Github.
 
-## JSON folder
-Your JSON folder will be automatically populated with the information you and your allies add into the dashboard. Do not worry if this is blank at start up but, if it stays blank after registration, please check your ports for proper flow path of information. 
+###### How it works:
+
+Each user has a unique ID by which it can be associated with other tables.
+Each table has a unique ID and a reference to an associated user via the user's id; this is represented by "userId".
+
+In the case of the "friends" table, each object is to be thought of as a relationship.  Each object, or "relationship", is represented with a unique ID.  The essence of the relationship is constructed by the "userId" and the "followingUserId", wherein the "userId" represents the user and the "followingUserId" represents the friend of the user. 
+
+In the "example.json" file, Jane (userId 3) is friends with both Billy (userId 2) and Bob (userId 1); consequently Billy and Bob are both friends with Jane. So in the first and second relationship object, in the "friends" table, userId 3 has a followingUserId of 2 in the relationship with the ID of 1 and followingUserId of 1 in the relationship with the ID of 2. Thus, Jane is friends with both Billy and Bob.
+
+## Database Structure and nomenclature
+For reference of what the database should look like, see "example.json" in the API directory.  Please ensure that variable names are identical to those listed in the example file.
 
 
 ## Support
@@ -41,4 +50,5 @@ The Creators of this dashboard are: Chad Jones, Erik Lindstrom, Brendan Abernath
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-<!-- End of readme to present -->
+
+

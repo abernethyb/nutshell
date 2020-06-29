@@ -45,19 +45,22 @@
 }
 
 .event__name {
-    border-bottom: 1px solid #373737;
-    margin: 0 10px 5px 10px;
+    border-bottom: 1px solid #42234d;
+    margin: 0 10px 0px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .event__name > h4 {
-    margin: 0 0 5px 0px;
+    color: black;
+    margin: 10px 0 0 0;
+    font-size: 20px;
+    text-shadow: 1px 1px #9a50b4;
 }
 
 .event__details > dl > dt {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
     padding: 10px 0 0px 10px;
     margin: 0;

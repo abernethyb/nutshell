@@ -36,6 +36,11 @@
                         </div>
                         <!-- USERNAME AND IMD SAMPLE HTML - END  -->
                     </div>
+                    <div class="user__userName">
+                        <p>AussholeWyatt <sup>&#8226;</sup></p>
+                    </div>
+                    <!-- USERNAME AND IMG SAMPLE HTML - END  -->
+                </div>
 
                     <!-- TASK CONTAINER -->
                     <div id="taskContainer">
@@ -264,102 +269,16 @@
                                     <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
                                 </div>
                             </div>
-                            <div class="articleTitle">
-                                <h3>
-                                    <a href="${obj.url}" alt="${obj.title}">Florida Man Arrested</a>
-                                </h3>
+                            
+                            <div class="addArticle">
+                                <button id="saveArticle" class="blueBtn" type="button">+ Article</button>
                             </div>
-                            <div class="article__description">
-                                <p>Local Florida man is arrested for operating motorized beer cooler while intoxicated.</p>
-                            </div>
-                        </div>
-
-                        <div id="article__${obj.id}" class="singleArticle">
-                            <div class="article__header">
-                                <div class="article__user">
-                                    AussholeWyatt
-                                </div>
-                                <div class="article__date">
-                                    6/24/20
-                                </div>
-                                <div class="article__deleteButton">
-                                    <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>
-                            </div>
-                            <div class="articleTitle">
-                                <h3>
-                                    <a href="${obj.url}" alt="${obj.title}">Florida Man Arrested, Again</a>
-                                </h3>
-                            </div>
-                            <div class="article__description">
-                                <p>Local Florida man released from jail, retreives motorized cooler from impound.</p>
-                            </div>
-                        </div>
-                        <div id="article__${obj.id}" class="singleArticle">
-                            <div class="article__header">
-                                <div class="article__user">
-                                    AussholeWyatt
-                                </div>
-                                <div class="article__date">
-                                    6/24/20
-                                </div>
-                                <div class="article__deleteButton">
-                                    <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>
-                            </div>
-                            <div class="articleTitle">
-                                <h3>
-                                    <a href="${obj.url}" alt="${obj.title}">Florida Man Drives Motorized Cooler into Gator Infested Swamp, Listed in Critical Condition</a>
-                                </h3>
-                            </div>
-                            <div class="article__description">
-                                <p>This was bound to happen...</p>
-                            </div>
-                        </div>
-                        <div id="article__${obj.id}" class="singleArticle">
-                            <div class="article__header">
-                                <div class="article__user">
-                                    AussholeWyatt
-                                </div>
-                                <div class="article__date">
-                                    6/24/20
-                                </div>
-                                <div class="article__deleteButton">
-                                    <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>
-                            </div>
-                            <div class="articleTitle">
-                                <h3>
-                                    <a href="${obj.url}" alt="${obj.title}">Florida Man Drives Motorized Cooler into Gator Infested Swamp, Listed in Critical Condition</a>
-                                </h3>
-                            </div>
-                            <div class="article__description">
-                                <p>This was bound to happen...</p>
-                            </div>
-                        </div>
-                        <div id="article__${obj.id}" class="singleArticle">
-                            <div class="article__header">
-                                <div class="article__user">
-                                    AussholeWyatt
-                                </div>
-                                <div class="article__date">
-                                    6/24/20
-                                </div>
-                                <div class="article__deleteButton">
-                                    <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>
-                            </div>
-                            <div class="articleTitle">
-                                <h3>
-                                    <a href="${obj.url}" alt="${obj.title}">Florida Man Drives Motorized Cooler into Gator Infested Swamp, Listed in Critical Condition</a>
-                                </h3>
-                            </div>
-                            <div class="article__description">
-                                <p>This was bound to happen...</p>
-                            </div>
-                        </div>
-                            <!-- SAMPLE ARTICLE HTML - END -->
+                        </form>
                     </div>
+                        <!-- SAMPLE ARTICLE HTML - START -->
+                    
+                    
+                        <!-- SAMPLE ARTICLE HTML - END -->
                 </div>
             </section>
             <!-- ARTICLES CONTAINER - END -->
@@ -431,23 +350,43 @@
                 </div>
             </section>
 
-            <!-- FRIENDS LIST - START -->
-            <section class="contentContainer__friendsFloat">   
-                <div class="friendsContainer__header">
-                    <div class="friendsHeader__title">
-                        <h3>FRIENDS</h3>
+                    <!-- EVENT SAMPLE HTML - START -->
+                    <div id="event__${obj.id}" class="singleEvent">
+                        <div class="event__header">
+                        <div class="event__name">
+                            <h4>Beg for Food</h4>
+                            <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                            </div>    
+                        </div>
+                        <div class="event__details">
+                            <dl>
+                                <dt>HOST</dt>
+                                    <dd>AussholeWyatt</dd>
+                                <dt>WHEN</dt>
+                                    <dd>7/2/2020</dd>
+                                <dt>WHERE</dt>
+                                    <dd>at the Dinner Table</dd>
+                            </dl>
+                        </div>
                     </div>
-                <div class="friendsContainer">        
-                        <!-- FRIEND SAMPLE HTML - START -->
-                        <div id="friend__${obj.id}" class="singleFriend">
-                            <div class="friend__userDetails">
-                                <img class="friend__UserImage" src="/images/userIcon.png" width="20px" height="20px">
-                                <div class="friend__name">
-                                    AussholeBosco
-                                </div>
-                            </div>
-                            <div class="friendsList__deleteBtn">
-                                <button id="deleteFriendBtn" class="deleteBtn" type="button">&times;</button>
+                    <!-- EVENT SAMPLE HTML - END -->            
+                </div>
+            </div>
+        </section>
+
+        <!-- FRIENDS LIST - START -->
+        <section class="contentContainer__friendsFloat">   
+            <div class="friendsContainer__header">
+                <div class="friendsHeader__title">
+                    <h3>FRIENDS</h3>
+                </div>
+            <div class="friendsContainer">        
+                    <!-- FRIEND SAMPLE HTML - START -->
+                    <div id="friend__${obj.id}" class="singleFriend">
+                        <div class="friend__userDetails">
+                            <img class="friend__userImage" src="/images/userIcon.png">
+                            <div class="friend__name">
+                                AussholeBosco
                             </div>
                         </div>
                         <!-- FRIEND SAMPLE HTML - END -->
