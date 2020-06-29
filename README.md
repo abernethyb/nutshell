@@ -91,28 +91,28 @@ In the example code below Jane, userId 3, is friends with both Billy, userId 2, 
     "friends": [
       {
         "userId": 3,
-        "followingUserId": 2,
+        "followinguserId": 2,
         "id": 1
       },
       {
         "userId": 3,
-        "followingUserId": 1,
+        "followinguserId": 1,
         "id": 2
       },
       {
         "userId": 1,
-        "followingUserId": 3,
+        "followinguserId": 3,
         "id": 3
       },
       {
         "userId": 2,
-        "followingUserId": 3,
+        "followinguserId": 3,
         "id": 4
       }
     ],
     "articles": [
       {
-        "UserId": 3,
+        "userId": 3,
         "title": "IBM Condemns Use Of Facial Recognition Software For Anything Other Than Matching People With Their Celebrity Doppelganger",
         "description": "I had to look twice here; didn't realize it was onion at first.",
         "url": "https://www.theonion.com/ibm-condemns-use-of-facial-recognition-software-for-any-1844146414",
@@ -120,7 +120,7 @@ In the example code below Jane, userId 3, is friends with both Billy, userId 2, 
         "id": 1
       },
       {
-        "UserId": 1,
+        "userId": 1,
         "title": "Tide Accused Of Over-Inflating Number Of Children Who Roll Around In Mud Puddles Before Running Into House",
         "description": "I guess kids these days just don't play outside no more",
         "url": "https://www.theonion.com/tide-accused-of-over-inflating-number-of-children-who-r-1844161395",
@@ -130,40 +130,37 @@ In the example code below Jane, userId 3, is friends with both Billy, userId 2, 
     ],
     "tasks": [
         {
-            "UserId": 1,
+            "userId": 1,
             "title": "make a database",
-            "description": "make a boilerplate database for this project to ensure that all team-members use identical variable names",
-            "expetedCompletionDate": "2020-06-26",
+            "expectCompleteBy": "2020-06-26",
             "complete": "true",
             "id": 1
           },
         {
-            "UserId": 1,
+            "userId": 1,
             "title": "make an API call function",
-            "description": "this function will retreive data from the database and make it usable throughout the program",
-            "expetedCompletionDate": "2020-06-26",
+            "expectCompleteBy": "2020-06-26",
             "complete": "false",
             "id": 2
         },
         {
-            "UserId": 2,
+            "userId": 2,
             "title": "take out trash",
-            "description": "The house is starting to smell bad.  Taking the trash that is inside of the house and moving it to a location that is not inside the house should help resolve this issue.  It will also help prevent all of the interior volume of the house from inevitably becoming filled with trash.",
-            "expetedCompletionDate": "2000-01-01",
+            "expectCompleteBy": "2000-01-01",
             "complete": "false",
             "id": 3
         }
     ],
     "events": [
         {
-            "UserId": 3,
+            "userId": 3,
             "title": "Cleanup day at Billy's house",
             "location": "Billy's house, 123 Main street, Bucksnort, TN 37140",
             "date": "2020-08-1",
             "id": 1
           },
         {
-            "UserId": 3,
+            "userId": 3,
             "title": "Yard Sale",
             "location": "my house, 126 Main street, Bucksnort, TN 37140",
             "date": "2020-08-2",
@@ -172,25 +169,25 @@ In the example code below Jane, userId 3, is friends with both Billy, userId 2, 
     ],
     "messages": [
         {
-            "UserId": 1,
+            "userId": 1,
             "content": "I'm baby ennui wayfarers quinoa waistcoat air plant iPhone.",
             "date": "2020-06-26",
             "id": 1
           },
         {
-            "UserId": 1,
+            "userId": 1,
             "content": "Heirloom cardigan etsy pinterest yuccie tumeric, banh mi shabby chic venmo before they sold out ugh humblebrag bicycle rights cred.",
             "date": "2020-06-26",
             "id": 2
         },
         {
-            "UserId": 3,
+            "userId": 3,
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "date": "2020-06-26",
             "id": 3
         },
         {
-            "UserId": 2,
+            "userId": 2,
             "content": "Fashion axe distillery slow-carb cliche, cold-pressed pork belly four loko try-hard lyft.",
             "date": "2020-06-26",
             "id": 4
