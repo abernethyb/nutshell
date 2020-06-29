@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: #373737;
     margin: 20px;
+    box-shadow: 2px 2px 4px #302e2ece;
 }
 
 .eventsContainer__header {
@@ -15,6 +16,20 @@
 .eventsHeader__title > h3 {
     margin: 0;
     color: whitesmoke;
+}
+
+.createEvent {
+    margin: 10px;
+    padding: 5px;
+}
+
+.eventFieldLabel {
+    color: whitesmoke;
+}
+
+.addEvent {
+    text-align: right;
+    padding-top: 10px;
 }
 
 .singleEvent {

@@ -32,3 +32,12 @@
 .friend__name {
     padding-left: 10px;
 }
+
+.searchFriendsField {
+    padding: 5px;
+    width: 97%;
+}
+
+.searchFriendsField > input {
+    width: 100%;
+}

@@ -13,10 +13,11 @@
     <!-- BANNER ELEMENT CONTAINER -->
     <article id="bannerContainer">
             <img src="/images/banner.jpg">
-        <div class="banner__logo">
-            <img src="/images/myNutshell.png">
+        <div class="bannerLogoContainer">
+            <div class="banner__logo">
+                <img src="/images/myNutshell.png">
+            </div>
         </div>
-
     </article>
 
     <!-- CONTENT CONTAINER -->
@@ -112,7 +113,7 @@
 
         <!-- STORES CHAT LOG, CHAT INPUT, AND ARTICLE ELEMENTS -->
         <section class="contentContainer__middle">
-
+            
             <!-- CHAT CONTAINER -->
             <div id="chat__container">
                     <h3>MESSAGES</h3>                 
@@ -144,9 +145,6 @@
                                 <div class="chatEditButton">
                                     <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
                                 </div>
-                                <div class="chatDeleteButton">
-                                    <button id="deleteChat__${obj.id}" class="chat__deleteBtn" type="button">Delete</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -160,6 +158,9 @@
                         <div class="chatFloat__middle">
                             <div class="chatAbove__userName">
                                 <h4>AussholeBosco</h4>
+                                
+                                    <button id="addFriendBtn" class="addBtn" type="button">+</button>
+
                             </div>
                             <div class="chatBelow__message">
                                 <p class="chat__text">
@@ -205,13 +206,50 @@
                     <div class="article__title">
                         <h3>ARTICLES</h3>
                     </div>
-                    <div class="article__addNew">
-                        <div class="article__btnContainer">
-                            <button id="article__addNewBtn" class="blueBtn" type="button">+ Article</button>
-                        </div>
-                    </div>
                 </div>
                 <div class="articleLog">
+
+                <!-- ARTICLE INPUT FIELD -->
+                    <div class="articleInput">
+                        <form action="">
+                            <div class="row">
+                                <div class="articleField">
+                                    <input type="hidden" name="articleDate" id="articleDate">
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="articleFieldLabel">
+                                    <label for="url">Article URL</label>
+                                </div>
+                                <div class="articleField">
+                                    <input type="text" name="url" placeholder="Write Here..." id="url">
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="articleFieldLabel">
+                                    <label for="concepts">Title</label>
+                                </div>
+                                <div class="articleField">
+                                    <input type="text" name="articleTitle" placeholder="Write Here..." id="articleTitle">
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="articleFieldLabel">
+                                    <label for="synopsis">Synopsis</label>
+                                </div>
+                                <div class="articleField">
+                                    <textarea id="synopsis" name="synopsis" placeholder="Write Here..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="addArticle">
+                                <button id="saveArticle" class="blueBtn" type="button">+ Article</button>
+                            </div>
+                        </form>
+                    </div>
                         <!-- SAMPLE ARTICLE HTML - START -->
                     <div id="article__${obj.id}" class="singleArticle">
                         <div class="article__header">
@@ -328,12 +366,44 @@
         <!-- EVENTS CONTAINER - START -->
         <section class="contentContainer__right">
             <div class="eventsContainer">
+                <div class="createEvent">
+                    <form action="">
+
+                        <div class="row">
+                            <div class="eventFieldLabel">
+                                <label for="eventName">Event Name</label>
+                            </div>
+                            <div class="eventInput">
+                                <input type="text" name="eventName" placeholder="Write Here..." id="eventName">
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="eventFieldLabel">
+                                <label for="eventDate">Date</label>
+                            </div>
+                            <div class="eventInput">
+                                <input type="date" name="eventDate" id="eventDate">
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="eventFieldLabel">
+                                <label for="eventLocation">Location</label>
+                            </div>
+                            <div class="eventInput">
+                                <input type="text" name="eventLocation" placeholder="Write Here..." id="eventLocation">
+                            </div>
+                        </div>
+                        
+                        <div class="addEvent">
+                            <button id="saveEvent" class="blueBtn" type="button">+ Event</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="eventsContainer__header">
                     <div class="eventsHeader__title">
                         <h3>EVENTS</h3>
-                    </div>
-                    <div class="eventsHeader__createBtn">
-                        <button id="addEventBtn" class="blueBtn" type="button">+ Event</button>
                     </div>
                 </div>
                 <div class="eventsContainer__eventsList">
@@ -383,7 +453,8 @@
                     
                 </div>
             </div>
-
+            <div class="searchFriendsField">
+                <input type="search" id="searchFriends" name="searchFriends" placeholder="Search Friends...">
             </div>
         </section> 
         <!-- FRIENDS LIST - END -->

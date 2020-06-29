@@ -20,19 +20,18 @@ body {
 }
 
 .contentContainer__left {
-    /* border: 1px solid blue; */
     width: 18%;
     margin: 10px 20px 0 5px;
 }
 
 .contentContainer__middle {
     width: 50%;
-    margin: 10px 20px 0 0;
+    margin: 10px 40px;
     padding: 10px 20px
 }
 
 .contentContainer__right {
-    width: 22%;
+    width: 20%;
 }
 
 .contentContainer__friendsFloat {

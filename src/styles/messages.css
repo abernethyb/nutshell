@@ -64,9 +64,14 @@
     font-size: 13px;
 }
 
+.chatAbove__userName {
+    display: flex;
+    flex-direction: row;
+}
+
 .chatAbove__userName > h4, p {
     margin: 0 5px 5px 10px;
-    padding-top: 5px;
+    padding-top: 0px;
 }
 
 .chatFloat__right {
@@ -77,8 +82,6 @@
     margin-right: 10px;
     width: 30%;
 }
-
-
 
 .messageInput__container {
     display: flex;
