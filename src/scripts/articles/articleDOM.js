@@ -26,11 +26,11 @@ const renderArticle = () => {
                         </div>
                         <div class="articleTitle">
                             <h3>
-                                <a href="${res.id}" alt="$./fixlater{obj.id}">Florida Man Arrested</a>
+                                <a href="${res.url}" alt="${res.title}">${res.title}</a>
                             </h3>
                         </div>
                         <div class="article__description">
-                            <p>Local Florida man is arrested for operating motorized beer cooler while intoxicated.</p>
+                            <p>${res.description}</p>
                         </div>
                     </div>
                     
