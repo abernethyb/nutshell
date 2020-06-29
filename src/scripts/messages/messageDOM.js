@@ -1,5 +1,3 @@
-
-
 const messageConverter = {
     messageEntry (obj) {
         const messageHTMLRepresentation = 
@@ -13,6 +11,9 @@ const messageConverter = {
             <div class="chatFloat__middle">
                 <div class="chatAbove__userName">
                     <h4>${obj.users.username}</h4>
+                    <div class="addBtn">
+                        <button id="addFriend__${obj.userId}" class="addBtn" type="button">+</button>
+                    <div>
                 </div>
                 <div class="chatBelow__message">
                     <p class="chat__text">
