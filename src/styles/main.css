@@ -1,3 +1,45 @@
+@import "banner.css";
+@import "sidebar.css";
+@import "articles.css";
+@import "events.css";
+@import "friends.css";
+@import "messages.css";
+@import "buttons.css";
+
+
+
 body {
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+}
+
+#contentContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contentContainer__left {
+    width: 18%;
+    margin: 10px 20px 0 5px;
+}
+
+.contentContainer__middle {
+    width: 50%;
+    margin: 10px 40px;
+    padding: 10px 20px
+}
+
+.contentContainer__right {
+    width: 20%;
+}
+
+.contentContainer__friendsFloat {
+    position: fixed;
+    display: block;
+    bottom: 0px;
+    right: 0px;
+    width: 300px;
+    height: auto;
+    background-color: #42234d;
 }
