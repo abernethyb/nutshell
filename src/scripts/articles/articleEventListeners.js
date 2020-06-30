@@ -1,7 +1,8 @@
+//This module was created by Brendan Abernethy
 import newArticle from "./articleFactory.js"
 import { API } from "../databaseCalls.js"
 import renderArticle from "./articleDOM.js"
-//import { API, dbResponseData } from "./databaseCalls.js"
+//import { API, dbResponseData } from "../databaseCalls.js"
 
 const articleInput = () => {
     
