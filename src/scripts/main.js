@@ -1,3 +1,4 @@
+
 import { API, dbResponseData } from "./databaseCalls.js"
 import messageData from "./messages/messageData.js"
 import renderMessage from "./messages/messageList.js"
@@ -6,7 +7,28 @@ import messageButtons from "./messages/messageOptions.js"
 import dateString from "./dateStamp.js"
 import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
+import loginButtons from "./users/loginButtons.js";
+import loginCalls from "./users/loginCalls.js";
 import articleEvent from "./articles/articleEventListeners.js"
+
+//ref w3 includeHTML 
+//pass html page if not current active user in session data
+
+if sessionStorage.getItem('user', 'undefined') {
+    window.location.href = "http://localhost:5000/src/login"
+} else {
+    sessionStorage.getItem('user', user)
+}
+
+// let isLoggedIn = false;
+//     if (!isLoggedIn) {
+//         window.location.href = "http://localhost:5000/src/login"
+//     } else {
+//         isLoggedIn = true;
+//         // window.location.href = "http://localhost:5000/src/"
+//         loginCalls.login
+//     }
+
 
 // MESSAGE FUNCTIONS
 messageData.getAllMessages()
