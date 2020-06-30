@@ -18,17 +18,7 @@ const messageData = {
         }) 
         .then(() => {
         element.scrollTop = element.scrollHeight - element.clientHeight
-        }
-        )       
-    },
-    postMessages: () => {
-        API.postData(url, table, newObject)
-    }, 
-    deleteMessages: () => {
-        API.deleteData(url, table, objectId)
-    },
-    editMessages: () => {
-        API.editData(url, table, objectId, editedObject)
+        })       
     }
 }
 
