@@ -14,7 +14,7 @@ import articleEvent from "./articles/articleEventListeners.js"
 //ref w3 includeHTML 
 //pass html page if not current active user in session data
 
-if sessionStorage.getItem('user', 'undefined') {
+if (sessionStorage.getItem('user', 'undefined')) {
     window.location.href = "http://localhost:5000/src/login"
 } else {
     sessionStorage.getItem('user', user)
