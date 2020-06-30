@@ -7,11 +7,18 @@ import dateString from "./dateStamp.js"
 import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
+import registrationListener from "./users/registrationListener.js"
+import modalFunction from "./users/login.js"
 
 // MESSAGE FUNCTIONS
 messageData.getAllMessages()
 sendButton()
 messageButtons.editListener()
+
+
+// REGISTRATION FUNCTIONS
+// registrationListener()
+modalFunction()
 
 
 //renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM
