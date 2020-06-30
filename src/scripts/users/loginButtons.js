@@ -5,9 +5,11 @@ const loginButtons = {
 //if they click login then 
 login () {
     document.querySelector("#loginButton").addEventListener("click", event =>{
+        console.log("login button")
         let username=document.querySelector("#username").value 
         let password=document.querySelector("#password").value
         loginCalls.login(username,password)
+        console.log(username, password)
     })
 },
 
@@ -27,6 +29,7 @@ register () {
         }
     })
 }
+
 }
 
 export default loginButtons;

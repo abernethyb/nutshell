@@ -1,19 +1,21 @@
 
-import includeHTML from "./users/includeHTML.js";
 import { API, dbResponseData } from "./databaseCalls.js"
 import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
+import session from "./users/sessionStorage.js"
 
 //ref w3 includeHTML 
 //pass html page if not current active user in session data
 
-let activeUser = false;
-    if (!activeUser) {
-        const main = document.querySelector(".container__login");
-        main.innerHTML=``
-        includeHTML(main,"login.html","file");
-} 
-//Do I need an else statement???
+sessionStorage.session.
+
+let isLoggedIn = false;
+    if (!isLoggedIn) {
+        window.location.href = "http://localhost:5000/src/login"
+    } 
+
+
+
 console.log('Hello World')
 
 //invocing the fetch call from database calls to test it...Brendan
@@ -38,6 +40,6 @@ API.getData("http://localhost:3000", "articles", "userId").then(
 // let testArticle = newArticle(2, "articleTest2", "another test of article functionality", "https://www.theonion.com/study-finds-gap-widening-between-rich-pets-and-poor-ame-1844134668", "2020-06-29")
 
 // //url, table, newObject
-// API.postData("http://localhost:3000", "articles", testArticle)
+API.postData("http://localhost:3000", "articles", testArticle)
 
 renderArticle()

@@ -1,4 +1,5 @@
 
+//ToDo link session storage to store user id and switch isLoggedIn to true
 
 export default {
     storeUser (userId) {

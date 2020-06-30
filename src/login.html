@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Login for MyNutShell</title>
 </head>
 <body>
@@ -17,27 +18,35 @@
             <label for="password">Password:</label><br>
             <input type="password" name="password" id="password" class="password" placeholder="Password">
         </fieldset>
-        <button type="button" class="registrationButton" data-toggle="modal" data-target="#myModal" id="registrationButton">Register</button>
+        <button type="button" class="registrationButton" id="registrationButton">Register</button>
         <button type="button" id="loginButton">Sign in</button>
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Modal Header</h4>
-                        </div>
-                        <div class="modal-body">
-                          <p>Some text in the modal.</p>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                </div>
-            </div>
     </form>
+           <div class="modal">
+               <div class="modal__contents">
+                   <span class="modal__close_bar">X</span>
+                        <fieldset>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="email" placeholder="Email">
+                        </fieldset>    
+                        <fieldset>
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" id="username" class="username" placeholder="Username">
+                        </fieldset>
+                        <fieldset>   
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" class="password" placeholder="Password">
+                        </fieldset>
+                        <fieldset>
+                            <label for="username">Retype Password</label>
+                            <input type="password" name="password2" id="password2" class="password2" placeholder="Retype Password">
+                        </fieldset>
+                        <button type="button" id="register">Register New Account</button>
+                </div>
+           </div>
+
 
 <script src="./scripts/login.js" type="module"></script>
+
     
 </body>
 </html>
