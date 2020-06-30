@@ -1,6 +1,6 @@
 import { API, dbResponseData } from "./databaseCalls.js"
-import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
+import articleEvent from "./articles/articleEventListeners.js"
 
 console.log('Hello World')
 
@@ -28,4 +28,41 @@ API.getData("http://localhost:3000", "articles", "user").then(
 // //url, table, newObject
 // API.postData("http://localhost:3000", "articles", testArticle)
 
+// document.querySelector(".saveEntry").addEventListener("click", event => {
+
+//     let theUserInputFromUserinputFunction = getUserInput()
+//     console.log(theUserInputFromUserinputFunction)
+
+
+//     API.saveJournalEntry(theUserInputFromUserinputFunction).then(
+//         () => {
+//             API.getJournalData().then(
+//                 () => {
+//                     DOMPush.journalList(entries)
+//                 }
+//             )
+//         }
+//     )
+
+
+
+// })
+console.log("breaking here?")
 renderArticle()
+//articleEvent()
+document.querySelector("#saveArticle").addEventListener("click", event => {
+    //userId, title, description, url, date
+
+    let inputfromArticlequery = articleEvent()
+    console.log(inputfromArticlequery)
+
+    API.postData("http://localhost:3000", "articles", inputfromArticlequery).then(
+        () => {
+           renderArticle()
+        }
+    )
+
+})
+
+
+
