@@ -9,6 +9,7 @@ import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
 import loginButtons from "./users/loginButtons.js";
 import loginCalls from "./users/loginCalls.js";
+import articleEvent from "./articles/articleEventListeners.js"
 
 //ref w3 includeHTML 
 //pass html page if not current active user in session data
@@ -35,30 +36,12 @@ sendButton()
 messageButtons.editListener()
 
 
-
+//renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM
 renderArticle()
-//invocing the fetch call from database calls to test it...Brendan
-//parameters for API.getData are (url, table, expand)
-//to use this, input url, the table you are looking for, and the table you wish to include (probably user)
-//example: ("http://localhost:3000", "tasks", "user")
-API.getData("http://localhost:3000", "articles", "userId").then(
-    () => {
-        console.log("hello?"),
-            dbResponseData.forEach(
-                (res) => {
-                    console.log(res)
 
-                }
-            )
-    }
-)
+//articleEvent is located in articleEventListener.js.  It is a function that calls an event listener on the saveArticle button and uses a post method to put user data into the articles table of the database.
+articleEvent()
 
 
-// //Brendan here testing article factory and post method
-// //userId, title, description, url, date
-// let testArticle = newArticle(2, "articleTest2", "another test of article functionality", "https://www.theonion.com/study-finds-gap-widening-between-rich-pets-and-poor-ame-1844134668", "2020-06-29")
 
-// //url, table, newObject
-API.postData("http://localhost:3000", "articles", testArticle)
 
-renderArticle()
