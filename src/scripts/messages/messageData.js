@@ -2,7 +2,7 @@
 import { API, dbResponseData } from "../databaseCalls.js"
 import renderMessage from "./messageList.js"
 
-const url = "http://localhost:8088"
+const url = "http://localhost:3000"
 const table = "messages"
 const expand ="user"
 

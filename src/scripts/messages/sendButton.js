@@ -2,7 +2,7 @@ import messageData from "./messageData.js"
 import { API, dbResponseData } from "../databaseCalls.js"
 import dateString from "../dateStamp.js"
 
-const url = "http://localhost:8088"
+const url = "http://localhost:3000"
 const table = "messages"
 const expand = "user"
 
