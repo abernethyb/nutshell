@@ -11,8 +11,9 @@ const loginCalls = {
             users.find(user => {
                 if(user.password === password && user.username === username) {
                     console.log("success" , user)
-                    window.location.href = "http://localhost:5000/src/"
-                    renderUser(user)
+                    sessionStorage.setItem('user', JSON.stringify(user))
+                    console.log(sessionStorage.getItem('user', user))
+                    // window.location.href = "http://localhost:5000/src/"
                     // TODO: store userID in session storage
                 } 
             })

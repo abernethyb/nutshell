@@ -13,18 +13,21 @@ import loginCalls from "./users/loginCalls.js";
 //ref w3 includeHTML 
 //pass html page if not current active user in session data
 
+if sessionStorage.getItem('user', 'undefined') {
+    window.location.href = "http://localhost:5000/src/login"
+} else {
+    sessionStorage.getItem('user', user)
+}
 
-let isLoggedIn = false;
-    if (!isLoggedIn) {
-        window.location.href = "http://localhost:5000/src/login"
-    } else {
-        isLoggedIn = true;
-        // window.location.href = "http://localhost:5000/src/"
-        loginCalls.login
-    }
+// let isLoggedIn = false;
+//     if (!isLoggedIn) {
+//         window.location.href = "http://localhost:5000/src/login"
+//     } else {
+//         isLoggedIn = true;
+//         // window.location.href = "http://localhost:5000/src/"
+//         loginCalls.login
+//     }
 
-// sessionStorage.setItem('isLoggedIn' , user)
-//     console.log(sessionStorage.getItem('isLoggedIn', user))
 
 // MESSAGE FUNCTIONS
 messageData.getAllMessages()
