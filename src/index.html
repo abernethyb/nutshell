@@ -12,10 +12,10 @@
 
     <!-- BANNER ELEMENT CONTAINER -->
     <article id="bannerContainer">
-            <img src="/images/banner.jpg">
+            <img src="./images/banner.jpg">
         <div class="bannerLogoContainer">
             <div class="banner__logo">
-                <img src="/images/myNutshell.png">
+                <img src="./images/myNutshell.png">
             </div>
         </div>
     </article>
@@ -28,7 +28,7 @@
                 <div class="userContainer">
                     <!-- USERNAME AND IMG SAMPLE HTML - START -->
                     <div class="user__profilePicture">
-                        <img class="mainUserImage" src="/images/wyatt.png">
+                        <img class="mainUserImage" src="./images/wyatt.png">
                     </div>
                     <div class="user__userName">
                         <p>AussholeWyatt <sup>&#8226;</sup></p>
@@ -66,44 +66,8 @@
                     <!-- THIS IS WHERE WE WILL POPULATE WITH HTML REPRESENTATIONS OF TASKS FROM DATABASE -->
                     <div class="taskLog">
 
-                        <!-- SAMPLE TASK HTML - TO BE REMOVED FROM HARDCODE-->
-                        <div id="task__id" class="singleTask">
-                            <div class="task__header">
-                                <div class="completeBy">
-                                    <p>Complete by: 7/2/2020</p>
-                                </div>
-                                <div class="taskDeleteButton">
-                                    <button id="deleteTaskBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>
-                            </div> 
-                            <div class="taskBody">
-                                <div class="task__checkbox">
-                                    <input type="checkbox" class="checkbox">
-                                </div>
-                                <div class="task__description">
-                                    <h3>Piss on couch in the bonus room</h3>
-                                </div>   
-                            </div>
-                        </div>
-
-                        <div id="task__id" class="singleTask">
-                            <div class="task__header">
-                                <div class="completeBy">
-                                    <p>Complete by: 7/3/2020</p>
-                                </div>
-                                <div class="taskDeleteButton">
-                                    <button id="deleteTaskBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>
-                            </div> 
-                            <div class="taskBody">
-                                <div class="task__checkbox">
-                                    <input type="checkbox" class="checkbox">
-                                </div>
-                                <div class="task__description">
-                                    <h3>Get into the trash and eat last nights scraps</h3>
-                                </div>   
-                            </div>
-                        </div>
+                        <!-- SAMPLE TASK HTML - START-->
+                        
                         <!-- END SAMPLE TASK HTML -->
                     </div>
                 </div>
@@ -117,66 +81,14 @@
             <!-- CHAT CONTAINER -->
             <div id="chat__container">
                     <h3>MESSAGES</h3>                 
-                <div class="chatLog">
-                    <!-- SAMPLE CHAT HTML - TO BE REMOVED FROM HARDCODE-->
-                    <div id="chat__${obj.id}" class="singleChat">
-                        <div class="chatFloat__left">
-                            <div class="chat__profilePicture">
-                                <img class="chat__userImage" src="/images/wyatt.png">
-                            </div>
-                        </div>
-                        <div class="chatFloat__middle">
-                            <div class="chatAbove__userName">
-                                <h4>AussholeWyatt</h4>
-                            </div>
-                            <div class="chatBelow__message">
-                                <p class="chat__text">
-                                    Owner stepped away from the table. I grabbed the porkchop off his plate before he got back. He blamed Bosco.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="chatFloat__right">
-                            <div class="chat__date">
-                                <div class="chatDate__container">
-                                    <p class="chatData__text">6/28/20</p>
-                                </div>
-                            </div>
-                            <div class="chat__buttonContainer">
-                                <div class="chatEditButton">
-                                    <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div id="chat__${obj.id}" class="singleChat">
-                        <div class="chatFloat__left">
-                            <div class="chat__profilePicture">
-                                <img class="chat__userImage" src="/images/bosco.png">
-                            </div>
-                        </div>
-                        <div class="chatFloat__middle">
-                            <div class="chatAbove__userName">
-                                <h4>AussholeBosco</h4>
-                                
-                                    <button id="addFriendBtn" class="addBtn" type="button">+</button>
+                <div id="chatLog" class="chatLog">
 
-                            </div>
-                            <div class="chatBelow__message">
-                                <p class="chat__text">
-                                    Thanks for letting me take the fall on that, ausshole. I was crated for the rest of the night because of you!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="chatFloat__right">
-                            <div class="chat__date">
-                                <div class="chatDate__container">
-                                    <p class="chatData__text">6/28/20</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- SAMPLE CHAT HTML - START-->
+                    
+
+
                     <!-- SAMPLE CHAT HTML - END -->
+
                 </div>
             </div>
             <!-- CHAT LOG CONTAINER - END -->
@@ -188,13 +100,17 @@
                 </div>
                 <div class="messageComposition__container">
                     <div class="messageInput__profilePicture">
-                        <img class="messageInput__userImage" src="/images/wyatt.png">
+                        <img class="messageInput__userImage" src="./images/wyatt.png">
                     </div>
                     <div class="messageInput__compose">
+                        <form action="">
+                            <input type="hidden" id="editId" value=""/>
+                            <input type="hidden" id="messageDate">
                             <textarea id="composeEntry" name="composeEntry" placeholder="Write a new message..."></textarea>
+                        </form>
                     </div>
                     <div class="messageInput__button">
-                        <button id="postMessageBtn" class="blueBtn" type="button">Send</button>
+                        <button id="sendButton" class="blueBtn" type="button">Send</button>
                     </div>
                 </div>    
             </div>
@@ -307,24 +223,7 @@
                 <div class="eventsContainer__eventsList">
 
                     <!-- EVENT SAMPLE HTML - START -->
-                    <div id="event__${obj.id}" class="singleEvent">
-                        <div class="event__header">
-                        <div class="event__name">
-                            <h4>Beg for Food</h4>
-                            <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
-                            </div>    
-                        </div>
-                        <div class="event__details">
-                            <dl>
-                                <dt>HOST</dt>
-                                    <dd>AussholeWyatt</dd>
-                                <dt>WHEN</dt>
-                                    <dd>7/2/2020</dd>
-                                <dt>WHERE</dt>
-                                    <dd>at the Dinner Table</dd>
-                            </dl>
-                        </div>
-                    </div>
+                    
                     <!-- EVENT SAMPLE HTML - END -->            
                 </div>
             </div>
@@ -340,7 +239,7 @@
                     <!-- FRIEND SAMPLE HTML - START -->
                     <div id="friend__${obj.id}" class="singleFriend">
                         <div class="friend__userDetails">
-                            <img class="friend__userImage" src="/images/userIcon.png">
+                            <img class="friend__userImage" src="./images/userIcon.png">
                             <div class="friend__name">
                                 AussholeBosco
                             </div>
@@ -363,6 +262,7 @@
     <!-- <footer>
             <p>Created by The Grave And The Rose</p>
         </footer> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 
