@@ -10,14 +10,40 @@
 </head>
 <body>
 
+    
     <!-- BANNER ELEMENT CONTAINER -->
     <article id="bannerContainer">
             <img src="./images/banner.jpg">
+            <div class="loginContainer">
+                <div class="loginFields">
+                    <div class="inputFields">
+                        <form class="loginInputs"> 
+                            <!-- username field -->
+                            <fieldset>
+                                <label for="username">Username:</label><br> 
+                                <input type="text" name="username" id="username" class="username" placeholder="Username">
+                            </fieldset>
+                            <!-- password field -->
+                            <fieldset>
+                                <label for="password">Password:</label><br>
+                                <input type="password" name="password" id="password" class="password" placeholder="Password">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="loginButtonContainer">
+                        <div class="loginButtons">
+                            <button type="button" class="registrationButton" id="registrationButton">Register</button>
+                            <button type="button" id="loginButton">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="bannerLogoContainer">
             <div class="banner__logo">
                 <img src="./images/myNutshell.png">
             </div>
         </div>
+        
     </article>
 
     <!-- CONTENT CONTAINER -->
@@ -258,6 +284,38 @@
         </section> 
         <!-- FRIENDS LIST - END -->
         
+        <!-- REGISTRATION MODAL CONTAINER -->
+    <div id="regModal" class="registerContainer">
+        <div id="simpleModal" class="modal">
+            <div class="modal__contents">
+                <div class="modalHeader">
+                    <span class="modal__close_bar">&times;</span>  
+                </div>
+                <div class="allFields">
+                    <fieldset class="registrationLabels">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" class="email" placeholder="Email">
+                    </fieldset>    
+                    <fieldset class="registrationLabels">
+                        <label for="username">Username:</label>
+                        <input type="text" name="username" id="username1" class="username" placeholder="Username">
+                    </fieldset>
+                    <fieldset class="registrationLabels">  
+                        <label for="password">Password:</label>
+                        <input type="password" name="password" id="password1" class="password" placeholder="Password">
+                    </fieldset>
+                    <fieldset class="registrationLabels">
+                        <label for="username">Retype Password</label>
+                        <input type="password" name="password2" id="password2" class="password2" placeholder="Retype Password">
+                    </fieldset>
+                </div>
+                <div class="registerAcct">
+                    <button type="button" id="register" class="blueBtn">Register</button>
+                </div>
+            
+        </div>
+    </div>
+
     </article>
     <!-- <footer>
             <p>Created by The Grave And The Rose</p>

@@ -1,0 +1,32 @@
+
+
+.loginFields {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginInputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+fieldset {
+    padding: 3px;
+    border: none;
+}
+
+fieldset > label {
+    font-size: 12px;
+    padding: 3px;
+    color: white;
+}
+
+
+
+.loginButtons {
+    padding: 10px 5px;
+    margin: 0;
+    text-align: right;
+}

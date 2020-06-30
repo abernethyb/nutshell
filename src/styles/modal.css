@@ -1,0 +1,77 @@
+#regModal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%;
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    padding: 10px;
+    background-color: rgb(255, 255, 255); /* Black w/ opacity */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#simpleModal {
+    display: flex;
+    width: auto;
+    height: 30%; 
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.registrationLabels {
+    display: flex;
+    flex-direction: column;
+}
+
+.registrationLabels > label {
+    color: black;
+}
+
+
+.modal__contents {
+    background-color: white;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalHeader {
+    margin: 0;
+    width: 90%;
+}
+
+.registerAcct {
+    padding-top: 8px;
+}
+
+#register {
+    justify-content: center;
+    
+}
+  
+ 
+  .modal__close_bar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -1.5rem;
+    margin-right: -1.5rem;
+    margin-bottom: -1rem;
+    justify-content: flex-end;
+}
+  
+.modal__close_bar:hover,
+.modal__close_bar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
