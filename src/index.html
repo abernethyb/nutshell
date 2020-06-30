@@ -81,7 +81,7 @@
             <!-- CHAT CONTAINER -->
             <div id="chat__container">
                     <h3>MESSAGES</h3>                 
-                <div class="chatLog">
+                <div id="chatLog" class="chatLog">
 
                     <!-- SAMPLE CHAT HTML - START-->
                     
@@ -103,12 +103,14 @@
                         <img class="messageInput__userImage" src="/images/wyatt.png">
                     </div>
                     <div class="messageInput__compose">
+                        <form action="">
                             <input type="hidden" id="editId" value=""/>
-                            <input type="hidden" id="messageDate"/>
+                            <input type="hidden" id="messageDate">
                             <textarea id="composeEntry" name="composeEntry" placeholder="Write a new message..."></textarea>
+                        </form>
                     </div>
                     <div class="messageInput__button">
-                        <button id="postMessageBtn" class="blueBtn" type="button">Send</button>
+                        <button id="sendButton" class="blueBtn" type="button">Send</button>
                     </div>
                 </div>    
             </div>
@@ -259,6 +261,7 @@
     <!-- <footer>
             <p>Created by The Grave And The Rose</p>
         </footer> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 

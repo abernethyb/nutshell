@@ -1,5 +1,4 @@
-const messageConverter = {
-    messageEntry (obj) {
+const messageConverter = (obj) => {
         const messageHTMLRepresentation = 
         `
         <div id="chat__${obj.id}" class="singleChat">
@@ -10,10 +9,8 @@ const messageConverter = {
             </div>
             <div class="chatFloat__middle">
                 <div class="chatAbove__userName">
-                    <h4>${obj.users.username}</h4>
-                    <div class="addBtn">
-                        <button id="addFriend__${obj.userId}" class="addBtn" type="button">+</button>
-                    <div>
+                    <h4>${obj.user.username}</h4>
+                    
                 </div>
                 <div class="chatBelow__message">
                     <p class="chat__text">
@@ -24,7 +21,7 @@ const messageConverter = {
             <div class="chatFloat__right">
                 <div class="chat__date">
                     <div class="chatDate__container">
-                        <p class="chatData__text">${obj.date}</p>
+                        <p class="chatDate__text">${obj.date}</p>
                     </div>
                 </div>
             <div class="chat__buttonContainer">
@@ -37,6 +34,6 @@ const messageConverter = {
         `
         return messageHTMLRepresentation
     }
-}
+
 
 export default messageConverter;
