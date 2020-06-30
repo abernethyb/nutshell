@@ -4,7 +4,7 @@ const messageConverter = (obj) => {
         <div id="chat__${obj.id}" class="singleChat">
             <div class="chatFloat__left">
                 <div class="chat__profilePicture">
-                    <img class="chat__userImage" src="/images/userIcon.png">
+                    <img class="chat__userImage" src="${obj.user.image}">
                 </div>
             </div>
             <div class="chatFloat__middle">

@@ -1,8 +1,9 @@
 import { API, dbResponseData } from "./databaseCalls.js"
-import todaysDate from "./messages/todaysDate.js"
 import messageData from "./messages/messageData.js"
 import renderMessage from "./messages/messageList.js"
 import sendButton from "./messages/sendButton.js"
+import messageButtons from "./messages/messageOptions.js"
+import dateString from "./dateStamp.js"
 
 //invocing the fetch call from database calls to test it...Brendan
 //parameters for API.getData are (url, table, expand)
@@ -23,3 +24,7 @@ import sendButton from "./messages/sendButton.js"
 
 messageData.getAllMessages()
 sendButton()
+messageButtons.editListener()
+
+
+console.log(dateString)
