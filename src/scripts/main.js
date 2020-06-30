@@ -49,20 +49,8 @@ API.getData("http://localhost:3000", "articles", "user").then(
 // })
 console.log("breaking here?")
 renderArticle()
-//articleEvent()
-document.querySelector("#saveArticle").addEventListener("click", event => {
-    //userId, title, description, url, date
+articleEvent()
 
-    let inputfromArticlequery = articleEvent()
-    console.log(inputfromArticlequery)
-
-    API.postData("http://localhost:3000", "articles", inputfromArticlequery).then(
-        () => {
-           renderArticle()
-        }
-    )
-
-})
 
 
 
