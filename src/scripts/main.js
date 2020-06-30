@@ -1,9 +1,20 @@
 import { API, dbResponseData } from "./databaseCalls.js"
+import messageData from "./messages/messageData.js"
+import renderMessage from "./messages/messageList.js"
+import sendButton from "./messages/sendButton.js"
+import messageButtons from "./messages/messageOptions.js"
+import dateString from "./dateStamp.js"
 import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
 
-console.log('Hello World')
+// MESSAGE FUNCTIONS
+messageData.getAllMessages()
+sendButton()
+messageButtons.editListener()
 
+
+
+renderArticle()
 //invocing the fetch call from database calls to test it...Brendan
 //parameters for API.getData are (url, table, expand)
 //to use this, input url, the table you are looking for, and the table you wish to include (probably user)
