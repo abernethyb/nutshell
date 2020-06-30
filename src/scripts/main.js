@@ -17,8 +17,9 @@ messageButtons.editListener()
 //renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM
 renderArticle()
 
-//articleEvent is located in articleEventListener.js.  It is a function that calls an event listener on the saveArticle button and uses a post method to put user data into the articles table of the database.
-articleEvent()
+//articleEvent is located in articleEventListener.js.  Write article is used to post an article and delete is used to delete.
+articleEvent.writeArticle()
+articleEvent.deleteArticle()
 
 
 
