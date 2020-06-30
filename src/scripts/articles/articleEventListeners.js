@@ -28,6 +28,7 @@ const articleEvent = () => {
     
         API.postData("http://localhost:3000", "articles", inputfromArticlequery).then(
             () => {
+                document.querySelector(".articleOutput").innerHTML = ""
                renderArticle()
             }
         )
