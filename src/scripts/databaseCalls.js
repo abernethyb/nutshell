@@ -1,10 +1,8 @@
 //url to json server NOTE: Make sure to add slash after to dig deeper
 const url="http://localhost:3000"
 //This module was created by Brendan Abernethy
-
 //These are empty arrays used to store data from the fetch call below.  This variable could be any data in the app, so always do an API call in or before the functionality you attempt to achieve.
 let dbResponseData = []
-
 
 //API object.
 const API = {
