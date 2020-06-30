@@ -2,19 +2,24 @@
 import { API, dbResponseData } from "./databaseCalls.js"
 import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
-import session from "./users/sessionStorage.js"
+import loginButtons from "./users/loginButtons.js";
+import loginCalls from "./users/loginCalls.js";
 
 //ref w3 includeHTML 
 //pass html page if not current active user in session data
 
-sessionStorage.session.
 
 let isLoggedIn = false;
     if (!isLoggedIn) {
         window.location.href = "http://localhost:5000/src/login"
-    } 
+    } else {
+        isLoggedIn = true;
+        // window.location.href = "http://localhost:5000/src/"
+        loginCalls.login
+    }
 
-
+// sessionStorage.setItem('isLoggedIn' , user)
+//     console.log(sessionStorage.getItem('isLoggedIn', user))
 
 console.log('Hello World')
 
@@ -43,3 +48,4 @@ API.getData("http://localhost:3000", "articles", "userId").then(
 API.postData("http://localhost:3000", "articles", testArticle)
 
 renderArticle()
+

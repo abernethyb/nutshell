@@ -7,6 +7,15 @@
     <title>Login for MyNutShell</title>
 </head>
 <body>
+    <article id="bannerContainer">
+        <img src="/images/banner.jpg">
+    <div class="bannerLogoContainer">
+        <div class="banner__logo">
+            <img src="/images/myNutshell.png">
+        </div>
+    </div>
+</article>
+
     <form> 
         <!-- username field -->
         <fieldset>
@@ -21,7 +30,7 @@
         <button type="button" class="registrationButton" id="registrationButton">Register</button>
         <button type="button" id="loginButton">Sign in</button>
     </form>
-           <div class="modal">
+           <div id="simpleModal" class="modal">
                <div class="modal__contents">
                    <span class="modal__close_bar">X</span>
                         <fieldset>
@@ -30,11 +39,11 @@
                         </fieldset>    
                         <fieldset>
                             <label for="username">Username:</label>
-                            <input type="text" name="username" id="username" class="username" placeholder="Username">
+                            <input type="text" name="username" id="username1" class="username" placeholder="Username">
                         </fieldset>
                         <fieldset>   
                             <label for="password">Password:</label>
-                            <input type="password" name="password" id="password" class="password" placeholder="Password">
+                            <input type="password" name="password" id="password1" class="password" placeholder="Password">
                         </fieldset>
                         <fieldset>
                             <label for="username">Retype Password</label>

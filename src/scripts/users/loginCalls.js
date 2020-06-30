@@ -1,19 +1,19 @@
 
 import {API, dbResponseData} from "../databaseCalls.js";
-import sessionData from "./sessionStorage.js"
+import renderUser from "./userList.js";
 
 const loginCalls = {
     login(username, password) {
         API.getAllUsers() 
         .then (users => {
-            console.log(users)
             console.log(username)
             console.log(password)
             users.find(user => {
                 if(user.password === password && user.username === username) {
                     console.log("success" , user)
                     window.location.href = "http://localhost:5000/src/"
-                    // TODO: redirect index.html here 
+                    renderUser(user)
+                    // TODO: store userID in session storage
                 } 
             })
         })
@@ -35,8 +35,7 @@ const loginCalls = {
                 })
                 if (duplicateEmail === false && duplicateUsername === false) {
                     API.saveUser(newUser)
-                    .then(user => sessionData.storeUser(user.id))
-                    .then(console.log(sessionData))
+                    .then 
                 }
             })
     }
