@@ -2,14 +2,10 @@
 import newArticle from "./articleFactory.js"
 import { API } from "../databaseCalls.js"
 import renderArticle from "./articleDOM.js"
-// import activeUserId from "../sessionData.js"
-import dateString from "../dateStamp.js"
 import { activeSession } from "../users/loginCalls.js"
-//import { API, dbResponseData } from "../databaseCalls.js"
-//import { activeSession } from "../users/loginCalls.js"
+import dateString from "../dateStamp.js"
 
 const articleInput = () => {
-    
         //userId, title, description, url, date
         let userId = activeSession.id
         let title = document.querySelector("#articleTitle").value

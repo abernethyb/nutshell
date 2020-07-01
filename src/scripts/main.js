@@ -8,9 +8,10 @@ import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
 import taskEvent from "./tasks/taskEventListeners.js"
 import taskData from "./tasks/taskData.js"
+import renderEvent from "./events/eventDOM.js"
+import eventEvent from "./events/eventEventListeners.js"
 
 // MESSAGE FUNCTIONS
-messageData.getAllMessages()
 sendButton()
 messageButtons.editListener()
 
@@ -30,6 +31,10 @@ renderArticle()
 //articleEvent is located in articleEventListener.js.  Write article is used to post an article and delete is used to delete.
 articleEvent.writeArticle()
 articleEvent.deleteArticle()
+
+renderEvent()
+eventEvent.writeEvent()
+eventEvent.deleteEvent()
 
 
 // TEST CONSOLE LOGS
