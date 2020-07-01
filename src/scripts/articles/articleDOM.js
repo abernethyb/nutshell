@@ -22,7 +22,7 @@ const renderArticle = () => {
                             ${res.date}
                                                 </div>
                             <div class="article__deleteButton">
-                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                                <button id="deleteArticleBtn__${res.id}" class="deleteBtn" type="button">&times;</button>
                             </div>
                         </div>
                         <div class="articleTitle">
