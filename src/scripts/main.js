@@ -6,7 +6,8 @@ import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
-import { dbResponseData } from "./databaseCalls.js"
+import renderEvent from "./events/eventDOM.js"
+import eventEvent from "./events/eventEventListeners.js"
 
 // MESSAGE FUNCTIONS
 // messageData.getAllMessages()
@@ -26,6 +27,10 @@ renderArticle()
 //articleEvent is located in articleEventListener.js.  Write article is used to post an article and delete is used to delete.
 articleEvent.writeArticle()
 articleEvent.deleteArticle()
+
+renderEvent()
+eventEvent.writeEvent()
+eventEvent.deleteEvent()
 
 
 // TEST CONSOLE LOGS
