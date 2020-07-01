@@ -15,7 +15,7 @@ const sendButton = () => {
         const hiddenId = document.querySelector("#editId").value
         console.log(hiddenId)
 
-        // defines the object to be saved
+        // Defines the object to be saved
         let message = {}
         message.userId = activeSession.id
         message.content = document.querySelector("#composeEntry").value
@@ -31,14 +31,14 @@ const sendButton = () => {
             console.log('update')
         }
         else if (message.content !== "") {
-            // clears value from message textarea field
+            // Clears value from message textarea field
             document.querySelector("#composeEntry").value = "" 
-            //populates the hidden date input with today's date and time
+            // Populates the hidden date input with today's date and time
             message.date = dateString
             // Posts message to API
             API.postData(url, table, message)
             .then(() => {
-                // then reloads container with updated data
+                // Then reloads container with updated data
                 $('#chatLog').empty()
                 messageData.getAllMessages() 
             })
