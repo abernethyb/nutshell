@@ -1,13 +1,13 @@
 // Created by Erik Lindstrom
-// this function creates a new task
+// this is a factory function creates a new task
 
-const createTask = (userId, task, date) => {
-    const newMessage = {
+const createTask = (userId, title, expectCompleteBy, complete) => ({
+    
         userId: userId,
-        task: task,
-        date: date
+        title: title,
+        expectCompleteBy: expectCompleteBy,
+        complete: complete
     }
-    return newTask
-}
+)
 
 export default createTask

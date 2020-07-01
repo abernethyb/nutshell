@@ -6,7 +6,7 @@ import renderArticle from "./articleDOM.js"
 import dateString from "../dateStamp.js"
 import { activeSession } from "../users/loginCalls.js"
 //import { API, dbResponseData } from "../databaseCalls.js"
-import { activeSession } from "../users/loginCalls.js"
+//import { activeSession } from "../users/loginCalls.js"
 
 const articleInput = () => {
     
