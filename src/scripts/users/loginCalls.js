@@ -12,7 +12,6 @@ const loginCalls = {
                 if(user.password === password && user.username === username) {
                     sessionStorage.setItem('user', JSON.stringify(user))
                     console.log(sessionStorage.getItem('user', user))
-
                     activeSession = user
                     $(".userContainer").empty()
                     renderUser(user)

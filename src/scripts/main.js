@@ -6,9 +6,11 @@ import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
+import { dbResponseData } from "./databaseCalls.js"
 
 // MESSAGE FUNCTIONS
-messageData.getAllMessages()
+// messageData.getAllMessages()
+
 sendButton()
 messageButtons.editListener()
 

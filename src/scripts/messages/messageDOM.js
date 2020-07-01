@@ -24,7 +24,7 @@ const messageConverter = (obj) => {
                         <p class="chatDate__text">${obj.date}</p>
                     </div>
                 </div>
-            <div class="chat__buttonContainer">
+            <div class="chat__buttonContainer" style="display: none">
                 <div class="chatEditButton">
                     <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
                 </div>
