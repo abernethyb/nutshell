@@ -1,8 +1,3 @@
-/* #bannerContainer {
-    height: 100px;
-    width: 100%;
-    background-color: navy;
-} */
 
 #bannerContainer {
     object-fit: cover;   
@@ -22,8 +17,8 @@
     text-align: center;
     position: absolute;
     display: block;
-    top: 23px;
-    width: 22%;
+    top: 40px;
+    width: 18%;
 }
 
 .banner__logo > img {  
