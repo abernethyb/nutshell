@@ -9,6 +9,11 @@ const renderEvent = () => {
     () => {
         // console.log("hello from eventDOM! Hello?"),
         //loop to iterate through database response
+            //console.log("unsorted events", dbResponseData)
+            dbResponseData.sort((a, b) => {
+                return a.date - b.date;
+              })
+           // console.log("sorted events", dbResponseData)
             dbResponseData.forEach(
                 (res) => {
                     // console.log(res)
