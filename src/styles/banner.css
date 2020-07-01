@@ -30,3 +30,19 @@
     width: 180px;
     height: auto;
 }
+
+.loginContainer {
+    display: flex;
+    flex-direction: row;
+    float: right;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 36%;
+}
+
+#regModal {
+    height: 500px;
+    width: 300px;
+    position: absolute;
+}
