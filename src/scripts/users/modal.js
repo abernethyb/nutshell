@@ -1,4 +1,5 @@
 
+
 const modalFunction = () => {
     const modal = document.getElementById('regModal');
     const modalBtn = document.getElementById('registrationButton')

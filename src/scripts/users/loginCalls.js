@@ -11,11 +11,14 @@ const loginCalls = {
             users.find(user => {
                 if(user.password === password && user.username === username) {
                     sessionStorage.setItem('user', JSON.stringify(user))
+                    console.log(sessionStorage.getItem('user', user))
+
                     activeSession = user
                     $(".userContainer").empty()
                     renderUser(user)
                     console.log('ACTIVE USER', activeSession)
-                } 
+
+                }
             })
         })
     },
