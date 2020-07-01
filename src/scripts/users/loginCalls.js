@@ -1,5 +1,8 @@
 
 import {API} from "../databaseCalls.js";
+import renderUser from "./userRender.js";
+
+let activeSession = {}
 
 const loginCalls = {
     login(username, password) {
@@ -10,6 +13,10 @@ const loginCalls = {
                     sessionStorage.setItem('user', JSON.stringify(user))
                     console.log(sessionStorage.getItem('user', user))
 
+                    activeSession = user
+                    $(".userContainer").empty()
+                    renderUser(user)
+                    console.log('ACTIVE USER', activeSession)
                 } 
             })
         })
@@ -37,4 +44,7 @@ const loginCalls = {
     }
 }
 
-export default loginCalls;
+export { 
+    loginCalls,
+    activeSession
+};

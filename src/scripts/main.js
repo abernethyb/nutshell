@@ -1,4 +1,4 @@
-// import { API, dbResponseData } from "./databaseCalls.js"
+
 import messageData from "./messages/messageData.js"
 import sendButton from "./messages/sendButton.js"
 import messageButtons from "./messages/messageOptions.js"
@@ -6,7 +6,7 @@ import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
-//import activeUserId from "./sessionData.js"
+
 
 
 // MESSAGE FUNCTIONS
@@ -28,3 +28,7 @@ renderArticle()
 //articleEvent is located in articleEventListener.js.  Write article is used to post an article and delete is used to delete.
 articleEvent.writeArticle()
 articleEvent.deleteArticle()
+
+
+
+// console.log('Active User Id', activeUserId)

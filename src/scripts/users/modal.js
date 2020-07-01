@@ -8,8 +8,8 @@ const modalFunction = () => {
     const modalBtn = document.getElementById('registrationButton')
     const closeBtn = document.querySelector(".modal__close_bar");
     const registerBtn = document.querySelector("#register")
-    // const contentHidderButton = document.querySelector("#loginButton")
-    // const contentHidden = document.querySelector(".main__container")
+    const contentHidderButton = document.querySelector("#loginButton")
+    const contentHidden = document.querySelector(".main__container")
 
     // // contentHidderButton.onclick = function(activeUserId) {
     // //     if(activeUserId !== "")

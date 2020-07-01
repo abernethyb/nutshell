@@ -27,7 +27,7 @@ const articleEvent = {
             //userId, title, description, url, date
         
             let inputfromArticlequery = articleInput()
-            console.log(inputfromArticlequery)
+            // console.log(inputfromArticlequery)
         
             API.postData("http://localhost:3000", "articles", inputfromArticlequery).then(
                 () => {
@@ -43,7 +43,7 @@ const articleEvent = {
             console.log(event.target.id)
             if (event.target.id.startsWith("deleteArticleBtn__")) {
                 const articleToDelete = event.target.id.split("__")[1]
-                console.log(articleToDelete)
+                // console.log(articleToDelete)
                 //url, table, ObjectId
                 API.deleteData("http://localhost:3000", "articles", articleToDelete).then(
                     () => {
