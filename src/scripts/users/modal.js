@@ -1,30 +1,6 @@
 
 
-
-// //get modal element
-// const modal = document.getElementById('simpleModal');
-// //get open modal button
-// const modalBtn = document.getElementById('registrationButton')
-// //get close button
-// const closeBtn = document.querySelector(".modal__close_bar")
-// //listen for open click
-// modalBtn.addEventListener('click', openModal);
-// //listen for close click
-// closeBtn.addEventListener('click', closeModal);
-
-import activeUserId from "../sessionData.js";
-
-
-// // function to open
-// function openModal () {
-//     modal.style.display = 'block';
-// }
-
-// // function to open
-// function closeModal () {
-//     modal.style.display = 'none';
-// }
-
+// import activeUserId from "../.js";
 
 
 const modalFunction = () => {
@@ -32,13 +8,13 @@ const modalFunction = () => {
     const modalBtn = document.getElementById('registrationButton')
     const closeBtn = document.querySelector(".modal__close_bar");
     const registerBtn = document.querySelector("#register")
-    const contentHidderButton = document.querySelector("#loginButton")
-    const contentHidden = document.querySelector(".main__container")
+    // const contentHidderButton = document.querySelector("#loginButton")
+    // const contentHidden = document.querySelector(".main__container")
 
-    contentHidderButton.onclick = function(activeUserId) {
-        if(activeUserId !== "")
-        contentHidden.style.display = "block";
-    }
+    // // contentHidderButton.onclick = function(activeUserId) {
+    // //     if(activeUserId !== "")
+    // //     contentHidden.style.display = "block";
+    // // }
     modalBtn.onclick = function() {
     modal.style.display = "block";
     }

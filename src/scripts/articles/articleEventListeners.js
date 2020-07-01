@@ -2,7 +2,7 @@
 import newArticle from "./articleFactory.js"
 import { API } from "../databaseCalls.js"
 import renderArticle from "./articleDOM.js"
-import activeUserId from "../sessionData.js"
+// import activeUserId from "../sessionData.js"
 import dateString from "../dateStamp.js"
 //import { API, dbResponseData } from "../databaseCalls.js"
 
