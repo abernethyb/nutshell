@@ -34,17 +34,17 @@
 import { API, dbResponseData } from "../databaseCalls.js"
 
 
-//function to render articles to DOM
+//function to render events to DOM
 const renderEvent = () => {
     //fetch call to get most recent data
     API.getData("http://localhost:3000", "events", "user").then(
     () => {
-        // console.log("hello from articleDOM! Hello?"),
+        // console.log("hello from eventDOM! Hello?"),
         //loop to iterate through database response
             dbResponseData.forEach(
                 (res) => {
                     // console.log(res)
-                        document.querySelector(".articleOutput").innerHTML += `
+                        document.querySelector(".eventOutput").innerHTML += `
                         <div id="event__${res.id}" class="singleEvent">
                         <div class="event__header">
                             <div class="event__name">

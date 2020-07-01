@@ -41,7 +41,7 @@ const eventEvent = {
             console.log(event.target.id)
             if (event.target.id.startsWith("deleteEventBtn__")) {
                 const eventToDelete = event.target.id.split("__")[1]
-                // console.log(articleToDelete)
+                 console.log(eventToDelete)
                 //url, table, ObjectId
                 API.deleteData("http://localhost:3000", "events", eventToDelete).then(
                     () => {
