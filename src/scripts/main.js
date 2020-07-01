@@ -1,17 +1,21 @@
-import { API, dbResponseData } from "./databaseCalls.js"
+// import { API, dbResponseData } from "./databaseCalls.js"
 import messageData from "./messages/messageData.js"
-import renderMessage from "./messages/messageList.js"
 import sendButton from "./messages/sendButton.js"
 import messageButtons from "./messages/messageOptions.js"
-import dateString from "./dateStamp.js"
-import newArticle from "./articles/articleFactory.js"
 import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
+import modalFunction from "./users/modal.js"
+import loginButtons from "./users/loginButtons.js"
 
 // MESSAGE FUNCTIONS
 messageData.getAllMessages()
 sendButton()
 messageButtons.editListener()
+
+// REGISTRATION FUNCTIONS
+loginButtons.login()
+loginButtons.register()
+modalFunction()
 
 
 //renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM

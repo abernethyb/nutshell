@@ -1,5 +1,6 @@
 //This module was created by Brendan Abernethy
 //These are empty arrays used to store data from the fetch call below.  This variable could be any data in the app, so always do an API call in or before the functionality you attempt to achieve.
+const url = "http://localhost:3000" ;
 let dbResponseData = []
 
 //API object.
@@ -43,7 +44,22 @@ const API = {
         	},
         	body: JSON.stringify(editedObject)
         }).then(response => response.json())
+    },
+    getAllUsers () {
+        return fetch(`${url}/users`)
+        .then(response => response.json())
+    },
+    saveUser (newUserObject) {
+        return fetch(`${url}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }, 
+            body: JSON.stringify(newUserObject)
+        })
+        .then(response => response.json())
     }
 }
+
 
 export { API, dbResponseData }
