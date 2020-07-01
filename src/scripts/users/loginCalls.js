@@ -17,7 +17,8 @@ const loginCalls = {
                     $(".userContainer").empty()
                     renderUser(user)
                     console.log('ACTIVE USER', activeSession)
-                } 
+
+                }
             })
         })
     },
