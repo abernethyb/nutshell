@@ -23,10 +23,8 @@ fieldset > label {
     color: white;
 }
 
-
-
 .loginButtons {
-    padding: 10px 5px;
+    padding: 5px 5px;
     margin: 0;
     text-align: right;
 }

@@ -1,5 +1,6 @@
 
 import {API} from "../databaseCalls.js";
+import renderUser from "./userRender.js";
 
 const loginCalls = {
     login(username, password) {
@@ -12,6 +13,8 @@ const loginCalls = {
                     console.log("success" , user)
                     sessionStorage.setItem('user', JSON.stringify(user))
                     console.log(sessionStorage.getItem('user', user))
+                    $(".userContainer").empty()
+                    renderUser(user)
                     // TODO: store userID in session storage
                 } 
             })

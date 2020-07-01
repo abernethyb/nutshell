@@ -3,6 +3,7 @@ import { API } from "../databaseCalls.js";
 import closeModal from "./modal.js";
 import modalFunction from "./modal.js";
 
+
 //event listeners for buttons on login page
 const loginButtons = {
 //if they click login then 
@@ -12,7 +13,7 @@ login () {
         let username=document.querySelector("#username").value 
         let password=document.querySelector("#password").value
         loginCalls.login(username,password)
-        console.log(username, password)
+        console.log('LOGGED', username, password)
     })
 },
 
