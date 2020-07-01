@@ -6,6 +6,8 @@ import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
+import taskEvent from "./tasks/taskEventListeners.js"
+import taskData from "./tasks/taskData.js"
 import renderEvent from "./events/eventDOM.js"
 import eventEvent from "./events/eventEventListeners.js"
 
@@ -17,6 +19,10 @@ messageButtons.editListener()
 loginButtons.login()
 loginButtons.register()
 modalFunction()
+
+taskEvent.taskEventListener()
+taskData.getAllTasks()
+taskEvent.deleteTask()
 
 // ARTICLE FUNCTIONS
 //renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM
