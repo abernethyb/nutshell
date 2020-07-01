@@ -1,6 +1,7 @@
 import messageData from "./messageData.js"
 import { API, dbResponseData } from "../databaseCalls.js"
 import dateString from "../dateStamp.js"
+import { activeSession } from "../users/loginCalls.js"
 
 const url = "http://localhost:3000"
 const table = "messages"
@@ -16,7 +17,7 @@ const sendButton = () => {
 
         // defines the object to be saved
         let message = {}
-        message.userId = 1   // <-- REPLACE THIS WITH USER REFERENCE
+        message.userId = activeSession.id
         message.content = document.querySelector("#composeEntry").value
         message.date = dateString
         if (hiddenId !== "") {

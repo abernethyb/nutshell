@@ -6,7 +6,7 @@ import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
-import { activeSession } from "./users/loginCalls.js"
+// import { activeSession } from "./users/loginCalls.js"
 // import activeUserId from "./sessionData.js"
 
 // MESSAGE FUNCTIONS
