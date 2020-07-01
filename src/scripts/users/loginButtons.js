@@ -1,5 +1,7 @@
 import { loginCalls } from "./loginCalls.js";
-import { API } from "../databaseCalls.js";
+import { API, dbResponseData } from "../databaseCalls.js";
+import messageData from "../messages/messageData.js";
+import { activeSession } from "../users/loginCalls.js";
 
 
 //event listeners for buttons on login page
@@ -14,7 +16,8 @@ login () {
         loginCalls.login(username,password)
         console.log(username, password)
         if (username !== "" && password !== "" && userDisplay !== "") {
-                    contentHidden.style.display = "block";
+            contentHidden.style.display = "block";
+            messageData.getAllMessages()
         }   
     })
 },

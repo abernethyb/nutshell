@@ -10,7 +10,6 @@ import renderEvent from "./events/eventDOM.js"
 import eventEvent from "./events/eventEventListeners.js"
 
 // MESSAGE FUNCTIONS
-messageData.getAllMessages()
 sendButton()
 messageButtons.editListener()
 
