@@ -2,6 +2,7 @@ const messageConverter = (obj) => {
         const messageHTMLRepresentation = 
         `
         <div id="chat__${obj.id}" class="singleChat">
+            <div class="userId" value="${obj.userId}"> </div>
             <div class="chatFloat__left">
                 <div class="chat__profilePicture">
                     <img class="chat__userImage" src="./images/userIcon.png">
@@ -24,7 +25,7 @@ const messageConverter = (obj) => {
                         <p class="chatDate__text">${obj.date}</p>
                     </div>
                 </div>
-            <div class="chat__buttonContainer" style="display: none">
+            <div class="chat__buttonContainer">
                 <div class="chatEditButton">
                     <button id="editChat__${obj.id}" class="chat__editBtn" type="button">Edit</button>
                 </div>

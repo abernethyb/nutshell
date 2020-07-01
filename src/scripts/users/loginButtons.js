@@ -1,6 +1,7 @@
 import { loginCalls } from "./loginCalls.js";
-import { API } from "../databaseCalls.js";
-import messageData from "../messages/messageData.js"
+import { API, dbResponseData } from "../databaseCalls.js";
+import messageData from "../messages/messageData.js";
+import { activeSession } from "../users/loginCalls.js";
 
 
 //event listeners for buttons on login page

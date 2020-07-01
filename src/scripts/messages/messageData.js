@@ -16,7 +16,7 @@ const messageData = {
         API.getData(url, table, expand)
         .then(() => {
             renderMessage(dbResponseData)
-        }) 
+        })
         .then(() => {
         element.scrollTop = element.scrollHeight - element.clientHeight
         })       
