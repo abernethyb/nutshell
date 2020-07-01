@@ -10,8 +10,8 @@ var monthNames = [
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
   ];
 var dateString = monthNames[month] + " " + date + "," + year + " @ " + currentTime;
-console.log(currentTime)
+// console.log(currentTime)
 
-console.log(dateString)
+// console.log(dateString)
 
 export default dateString
