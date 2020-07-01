@@ -4,7 +4,6 @@ import { API } from "../databaseCalls.js"
 import renderArticle from "./articleDOM.js"
 // import activeUserId from "../sessionData.js"
 import dateString from "../dateStamp.js"
-import { activeSession } from "../users/loginCalls.js"
 //import { API, dbResponseData } from "../databaseCalls.js"
 import { activeSession } from "../users/loginCalls.js"
 
