@@ -5,11 +5,8 @@ const loginCalls = {
     login(username, password) {
         API.getAllUsers() 
         .then (users => {
-            console.log(username)
-            console.log(password)
             users.find(user => {
                 if(user.password === password && user.username === username) {
-                    console.log("success" , user)
                     sessionStorage.setItem('user', JSON.stringify(user))
                     console.log(sessionStorage.getItem('user', user))
                     // TODO: store userID in session storage

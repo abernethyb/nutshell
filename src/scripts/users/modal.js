@@ -29,7 +29,13 @@ const modalFunction = () => {
     const modalBtn = document.getElementById('registrationButton')
     const closeBtn = document.querySelector(".modal__close_bar");
     const registerBtn = document.querySelector("#register")
+    const contentHidderButton = document.querySelector("#loginButton")
+    const contentHidden = document.querySelector(".main__container")
 
+    contentHidderButton.onclick = function() {
+        if ()
+        contentHidden.style.display = "block";
+    }
     modalBtn.onclick = function() {
     modal.style.display = "block";
     }
