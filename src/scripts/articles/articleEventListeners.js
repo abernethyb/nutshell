@@ -9,7 +9,7 @@ import dateString from "../dateStamp.js"
 const articleInput = () => {
     
         //userId, title, description, url, date
-        let userId = activeUserId
+        let userId = 1
         let title = document.querySelector("#articleTitle").value
         let description = document.querySelector("#synopsis").value
         let url = document.querySelector("#url").value
