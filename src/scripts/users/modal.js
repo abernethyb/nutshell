@@ -12,6 +12,9 @@
 // //listen for close click
 // closeBtn.addEventListener('click', closeModal);
 
+import activeUserId from "../sessionData.js";
+
+
 // // function to open
 // function openModal () {
 //     modal.style.display = 'block';
@@ -32,8 +35,8 @@ const modalFunction = () => {
     const contentHidderButton = document.querySelector("#loginButton")
     const contentHidden = document.querySelector(".main__container")
 
-    contentHidderButton.onclick = function() {
-        if ()
+    contentHidderButton.onclick = function(activeUserId) {
+        if(activeUserId !== "")
         contentHidden.style.display = "block";
     }
     modalBtn.onclick = function() {
