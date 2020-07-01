@@ -20,7 +20,7 @@ const taskInput = () => {
     let userId = activeSession.id
     let title = document.querySelector("#taskTitle").value
     let expectCompleteBy = document.querySelector("#taskDate").value
-    let complete = document.querySelector(".complete").value
+    let complete = document.querySelector(".checkbox").value
     let taskUserInput = createTask(userId, title, expectCompleteBy, complete)
     return taskUserInput
 
