@@ -7,11 +7,11 @@ const renderArticle = () => {
     //fetch call to get most recent data
     API.getData("http://localhost:3000", "articles", "user").then(
     () => {
-        console.log("hello from articleDOM! Hello?"),
+        // console.log("hello from articleDOM! Hello?"),
         //loop to iterate through database response
             dbResponseData.forEach(
                 (res) => {
-                    console.log(res)
+                    // console.log(res)
                         document.querySelector(".articleOutput").innerHTML += `
                     <div id="article__${res.id}" class="singleArticle">
                         <div class="article__header">
