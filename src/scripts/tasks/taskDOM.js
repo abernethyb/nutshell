@@ -1,3 +1,6 @@
+//Created by Erik Lindstrom
+//Takes 
+
 const taskConverter = {
     taskEntry (obj) {
         const taskHTMLRepresentation = 
