@@ -4,21 +4,21 @@ import { API } from "../databaseCalls.js"
 import renderArticle from "./articleDOM.js"
 // import activeUserId from "../sessionData.js"
 import dateString from "../dateStamp.js"
+import { activeSession } from "../users/loginCalls.js"
 //import { API, dbResponseData } from "../databaseCalls.js"
+import { activeSession } from "../users/loginCalls.js"
 
 const articleInput = () => {
     
         //userId, title, description, url, date
-        let userId = activeUserId
+        let userId = activeSession.id
         let title = document.querySelector("#articleTitle").value
         let description = document.querySelector("#synopsis").value
         let url = document.querySelector("#url").value
         let date = dateString
         let articleUserInput = newArticle(userId, title, description, url, date)
         console.log("hellofromarticleinput!!", articleUserInput)
-        return articleUserInput
-    
-            
+        return articleUserInput          
 }
 
 const articleEvent = {

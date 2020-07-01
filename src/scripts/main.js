@@ -7,9 +7,6 @@ import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
 
-
-
-
 // MESSAGE FUNCTIONS
 messageData.getAllMessages()
 sendButton()
@@ -20,9 +17,7 @@ loginButtons.login()
 loginButtons.register()
 modalFunction()
 
-
-
-
+// ARTICLE FUNCTIONS
 //renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM
 renderArticle()
 
@@ -31,5 +26,5 @@ articleEvent.writeArticle()
 articleEvent.deleteArticle()
 
 
-
+// TEST CONSOLE LOGS
 // console.log('Active User Id', activeUserId)
