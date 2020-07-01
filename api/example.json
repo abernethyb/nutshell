@@ -23,22 +23,22 @@
     "friends": [
       {
         "userId": 3,
-        "followinguserId": 2,
+        "activeUserId": 2,
         "id": 1
       },
       {
         "userId": 3,
-        "followinguserId": 1,
+        "activeUserId": 1,
         "id": 2
       },
       {
         "userId": 1,
-        "followinguserId": 3,
+        "activeUserId": 3,
         "id": 3
       },
       {
         "userId": 2,
-        "followinguserId": 3,
+        "activeUserId": 3,
         "id": 4
       }
     ],

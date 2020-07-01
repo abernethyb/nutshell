@@ -1,6 +1,6 @@
-//This module was created by Brendan Abernethy
+//This module was created by Brendan Abernethy with the exception of lines 3 and 49 through 54
 //These are empty arrays used to store data from the fetch call below.  This variable could be any data in the app, so always do an API call in or before the functionality you attempt to achieve.
-//const url = "http://localhost:3000" ;
+const url = "http://localhost:3000" ; //This variable is not doing anything and may cause problems
 let dbResponseData = []
 
 //API object.
@@ -45,7 +45,7 @@ const API = {
         	body: JSON.stringify(editedObject)
         }).then(response => response.json())
     },
-    //this is redundant.  You can invoke getData(url/users). -Brendan
+    //this is redundant but it works.  You could invoke getData(url/users). -Brendan
     getAllUsers () {
         return fetch(`${url}/users`)
         .then(response => response.json())
@@ -65,3 +65,6 @@ const API = {
 
 
 export { API, dbResponseData }
+
+
+//Lines 3 and 49 through 54 do not need to be in this module.  we can get rid of them in the future.
