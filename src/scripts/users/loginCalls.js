@@ -1,6 +1,5 @@
 
-import {API, dbResponseData} from "../databaseCalls.js";
-import renderUser from "./userList.js";
+import {API} from "../databaseCalls.js";
 
 const loginCalls = {
     login(username, password) {
@@ -13,7 +12,6 @@ const loginCalls = {
                     console.log("success" , user)
                     sessionStorage.setItem('user', JSON.stringify(user))
                     console.log(sessionStorage.getItem('user', user))
-                    // window.location.href = "http://localhost:5000/src/"
                     // TODO: store userID in session storage
                 } 
             })

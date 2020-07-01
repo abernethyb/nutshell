@@ -1,24 +1,11 @@
-//url to json server NOTE: Make sure to add slash after to dig deeper
-const url="http://localhost:3000"
 //This module was created by Brendan Abernethy
 //These are empty arrays used to store data from the fetch call below.  This variable could be any data in the app, so always do an API call in or before the functionality you attempt to achieve.
+const url = "http://localhost:3000" ;
 let dbResponseData = []
 
 //API object.
 const API = {
-    getAllUsers () {
-        return fetch(`${url}/users`)
-        .then(response => response.json())
-    },
-    saveUser(newUserObj) {
-        return fetch(`${url}/users`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newUserObj)
-        }).then(response => response.json())
-    },   
+    //fetch call function.  accepts url, table, and another table (expand) as parameters
     getData(url, table, expand) {
         console.log("is getData even running?")
         return fetch(`${url}/${table}?_expand=${expand}`).then(
@@ -57,7 +44,22 @@ const API = {
         	},
         	body: JSON.stringify(editedObject)
         }).then(response => response.json())
+    },
+    getAllUsers () {
+        return fetch(`${url}/users`)
+        .then(response => response.json())
+    },
+    saveUser (newUserObject) {
+        return fetch(`${url}/users`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }, 
+            body: JSON.stringify(newUserObject)
+        })
+        .then(response => response.json())
     }
 }
+
 
 export { API, dbResponseData }

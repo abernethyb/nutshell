@@ -10,14 +10,40 @@
 </head>
 <body>
 
+    
     <!-- BANNER ELEMENT CONTAINER -->
     <article id="bannerContainer">
             <img src="./images/banner.jpg">
+            <div class="loginContainer">
+                <div class="loginFields">
+                    <div class="inputFields">
+                        <form class="loginInputs"> 
+                            <!-- username field -->
+                            <fieldset>
+                                <label for="username">Username:</label><br> 
+                                <input type="text" name="username" id="username" class="username" placeholder="Username">
+                            </fieldset>
+                            <!-- password field -->
+                            <fieldset>
+                                <label for="password">Password:</label><br>
+                                <input type="password" name="password" id="password" class="password" placeholder="Password">
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="loginButtonContainer">
+                        <div class="loginButtons">
+                            <button type="button" class="registrationButton" id="registrationButton">Register</button>
+                            <button type="button" id="loginButton">Sign in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="bannerLogoContainer">
             <div class="banner__logo">
                 <img src="./images/myNutshell.png">
             </div>
         </div>
+        
     </article>
 
     <!-- CONTENT CONTAINER -->
@@ -36,43 +62,44 @@
                     <!-- USERNAME AND IMG SAMPLE HTML - END  -->
                 </div>
 
-                    <!-- TASK CONTAINER -->
-                    <div id="taskContainer">
-                        <div class="createTask">
-                            <form action="">
-                                <div class="row">
-                                    <div class="fieldLabel">
-                                        <label for="date">Complete By</label>
-                                    </div>
-                                    <div class="field">
-                                        <input type="date" name="taskDate" id="taskDate">
-                                    </div>
+                <!-- TASK CONTAINER -->
+                <div id="taskContainer">
+                    <div class="createTask">
+                        <form action="">
+                            <div class="row">
+                                <div class="fieldLabel">
+                                    <label for="date">Complete By</label>
                                 </div>
-                                <div class="row">
-                                    <div class="fieldLabel">
-                                        <label for="taskName">Task</label>
-                                    </div>
-                                    <div class="field">
-                                        <textarea id="taskName" name="taskName" placeholder="Write Here..."></textarea>
-                                    </div>
+                                <div class="field">
+                                    <input type="date" name="taskDate" id="taskDate">
                                 </div>
-                            <div class="createTask__saveBtn">
-                                <button id="saveTask" class="blueBtn" type="button">+ Task</button>
                             </div>
+                            <div class="row">
+                                <div class="fieldLabel">
+                                    <label for="taskName">Task</label>
+                                </div>
+                                <div class="field">
+                                    <textarea id="taskName" name="taskName" placeholder="Write Here..."></textarea>
+                                </div>
+                            </div>
+                        <div class="createTask__saveBtn">
+                            <button id="saveTask" class="blueBtn" type="button">+ Task</button>
                         </div>
-                        <div class="taskTitle">
-                            <h3>TASKS</h3>
-                        </div>
-                        <!-- THIS IS WHERE WE WILL POPULATE WITH HTML REPRESENTATIONS OF TASKS FROM DATABASE -->
-                        <div class="taskLog">
+                    </div>
+                    <div class="taskTitle">
+                        <h3>TASKS</h3>
+                    </div>
+                    <!-- THIS IS WHERE WE WILL POPULATE WITH HTML REPRESENTATIONS OF TASKS FROM DATABASE -->
+                    <div class="taskLog">
 
                         <!-- SAMPLE TASK HTML - START-->
                         
                         <!-- END SAMPLE TASK HTML -->
                     </div>
                 </div>
+            </div>
 
-            </section>
+        </section>
 
         <!-- STORES CHAT LOG, CHAT INPUT, AND ARTICLE ELEMENTS -->
         <section class="contentContainer__middle">
@@ -89,7 +116,8 @@
                     <!-- SAMPLE CHAT HTML - END -->
 
                 </div>
-                <!-- CHAT LOG CONTAINER - END -->
+            </div>
+            <!-- CHAT LOG CONTAINER - END -->
 
             <!-- CHAT INPUT - START -->
             <div class="messageInput__container">
@@ -110,81 +138,52 @@
                     <div class="messageInput__button">
                         <button id="sendButton" class="blueBtn" type="button">Send</button>
                     </div>
-                    <div class="messageComposition__container">
-                        <div class="messageInput__profilePicture">
-                            <img class="messageInput__userImage" src="./images/wyatt.png">
-                        </div>
-                        <div class="messageInput__compose">
-                                <textarea id="composeEntry" name="composeEntry" placeholder="Write a new message..."></textarea>
-                        </div>
-                        <div class="messageInput__button">
-                            <button id="postMessageBtn" class="blueBtn" type="button">Send</button>
-                        </div>
-                    </div>    
-                </div>
-                <!-- CHAT INPUT - END -->
+                </div>    
+            </div>
+            <!-- CHAT INPUT - END -->
 
-                <!-- ARTICLES CONTAINER - START -->
-                <div class="articleContainer">
-                    <div class="articleContainer__header">
-                        <div class="article__title">
-                            <h3>ARTICLES</h3>
-                        </div>
+            <!-- ARTICLES CONTAINER - START -->
+            <div class="articleContainer">
+                <div class="articleContainer__header">
+                    <div class="article__title">
+                        <h3>ARTICLES</h3>
                     </div>
-                    <div class="articleLog">
+                </div>
+                <div class="articleLog">
 
-                    <!-- ARTICLE INPUT FIELD -->
-                        <div class="articleInput">
-                            <form action="">
-                                <div class="row">
-                                    <div class="articleField">
-                                        <input type="hidden" name="articleDate" id="articleDate">
-                                    </div>
+                <!-- ARTICLE INPUT FIELD -->
+                    <div class="articleInput">
+                        <form action="">
+                            <div class="row">
+                                <div class="articleField">
+                                    <input type="hidden" name="articleDate" id="articleDate">
                                 </div>
-                            
-                                <div class="row">
-                                    <div class="articleFieldLabel">
-                                        <label for="url">Article URL</label>
-                                    </div>
-                                    <div class="articleField">
-                                        <input type="text" name="url" placeholder="Write Here..." id="url">
-                                    </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="articleFieldLabel">
+                                    <label for="url">Article URL</label>
                                 </div>
-                            
-                                <div class="row">
-                                    <div class="articleFieldLabel">
-                                        <label for="concepts">Title</label>
-                                    </div>
-                                    <div class="articleField">
-                                        <input type="text" name="articleTitle" placeholder="Write Here..." id="articleTitle">
-                                    </div>
+                                <div class="articleField">
+                                    <input type="text" name="url" placeholder="Write Here..." id="url">
                                 </div>
-                            
-                                <div class="row">
-                                    <div class="articleFieldLabel">
-                                        <label for="synopsis">Synopsis</label>
-                                    </div>
-                                    <div class="articleField">
-                                        <textarea id="synopsis" name="synopsis" placeholder="Write Here..."></textarea>
-                                    </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="articleFieldLabel">
+                                    <label for="concepts">Title</label>
                                 </div>
-                                
-                                <div class="addArticle">
-                                    <button id="saveArticle" class="blueBtn" type="button">+ Article</button>
+                                <div class="articleField">
+                                    <input type="text" name="articleTitle" placeholder="Write Here..." id="articleTitle">
                                 </div>
-                            </form>
-                        </div>
-                            <!-- SAMPLE ARTICLE HTML - START -->
-                        <div id="article__${obj.id}" class="singleArticle">
-                            <div class="article__header">
-                                <div class="article__user">
-                                    AussholeWyatt
+                            </div>
+                        
+                            <div class="row">
+                                <div class="articleFieldLabel">
+                                    <label for="synopsis">Synopsis</label>
                                 </div>
-                                <div class="article__date">
-                                    6/24/20
-                                </div>
-                                <div class="article__deleteButton">
-                                    <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
+                                <div class="articleField">
+                                    <textarea id="synopsis" name="synopsis" placeholder="Write Here..."></textarea>
                                 </div>
                             </div>
                             
@@ -200,75 +199,54 @@
                     
                         <!-- SAMPLE ARTICLE HTML - END -->
                 </div>
-            </section>
-            <!-- ARTICLES CONTAINER - END -->
+            </div>
+        </section>
+        <!-- ARTICLES CONTAINER - END -->
 
-            <!-- EVENTS CONTAINER - START -->
-            <section class="contentContainer__right">
-                <div class="eventsContainer">
-                    <div class="createEvent">
-                        <form action="">
+        <!-- EVENTS CONTAINER - START -->
+        <section class="contentContainer__right">
+            <div class="eventsContainer">
+                <div class="createEvent">
+                    <form action="">
 
-                            <div class="row">
-                                <div class="eventFieldLabel">
-                                    <label for="eventName">Event Name</label>
-                                </div>
-                                <div class="eventInput">
-                                    <input type="text" name="eventName" placeholder="Write Here..." id="eventName">
-                                </div>
+                        <div class="row">
+                            <div class="eventFieldLabel">
+                                <label for="eventName">Event Name</label>
                             </div>
-                        
-                            <div class="row">
-                                <div class="eventFieldLabel">
-                                    <label for="eventDate">Date</label>
-                                </div>
-                                <div class="eventInput">
-                                    <input type="date" name="eventDate" id="eventDate">
-                                </div>
-                            </div>
-                        
-                            <div class="row">
-                                <div class="eventFieldLabel">
-                                    <label for="eventLocation">Location</label>
-                                </div>
-                                <div class="eventInput">
-                                    <input type="text" name="eventLocation" placeholder="Write Here..." id="eventLocation">
-                                </div>
-                            </div>
-                            
-                            <div class="addEvent">
-                                <button id="saveEvent" class="blueBtn" type="button">+ Event</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="eventsContainer__header">
-                        <div class="eventsHeader__title">
-                            <h3>EVENTS</h3>
-                        </div>
-                    </div>
-                    <div class="eventsContainer__eventsList">
-
-                        <!-- EVENT SAMPLE HTML - START -->
-                        <div id="event__${obj.id}" class="singleEvent">
-                            <div class="event__header">
-                            <div class="event__name">
-                                <h4>Beg for Food</h4>
-                                <button id="deleteArticleBtn" class="deleteBtn" type="button">&times;</button>
-                                </div>    
-                            </div>
-                            <div class="event__details">
-                                <dl>
-                                    <dt>WHEN</dt>
-                                        <dd>7/2/2020</dd>
-                                    <dt>WHERE</dt>
-                                        <dd>at the Dinner Table</dd>
-                                </dl>
+                            <div class="eventInput">
+                                <input type="text" name="eventName" placeholder="Write Here..." id="eventName">
                             </div>
                         </div>
-                        <!-- EVENT SAMPLE HTML - END -->            
+                    
+                        <div class="row">
+                            <div class="eventFieldLabel">
+                                <label for="eventDate">Date</label>
+                            </div>
+                            <div class="eventInput">
+                                <input type="date" name="eventDate" id="eventDate">
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="eventFieldLabel">
+                                <label for="eventLocation">Location</label>
+                            </div>
+                            <div class="eventInput">
+                                <input type="text" name="eventLocation" placeholder="Write Here..." id="eventLocation">
+                            </div>
+                        </div>
+                        
+                        <div class="addEvent">
+                            <button id="saveEvent" class="blueBtn" type="button">+ Event</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="eventsContainer__header">
+                    <div class="eventsHeader__title">
+                        <h3>EVENTS</h3>
                     </div>
                 </div>
-            </section>
+                <div class="eventsContainer__eventsList">
 
                     <!-- EVENT SAMPLE HTML - START -->
                     
@@ -292,18 +270,55 @@
                                 AussholeBosco
                             </div>
                         </div>
-                        <!-- FRIEND SAMPLE HTML - END -->
-                        
+                        <div class="friendsList__deleteBtn">
+                            <button id="deleteFriendBtn" class="deleteBtn" type="button">&times;</button>
+                        </div>
                     </div>
+                    <!-- FRIEND SAMPLE HTML - END -->
+                    
                 </div>
-                <div class="searchFriendsField">
-                    <input type="search" id="searchFriends" name="searchFriends" placeholder="Search Friends...">
+            </div>
+            <div class="searchFriendsField">
+                <input type="search" id="searchFriends" name="searchFriends" placeholder="Search Friends...">
+            </div>
+        </section> 
+        <!-- FRIENDS LIST - END -->
+        
+        <!-- REGISTRATION MODAL CONTAINER -->
+    <div id="regModal" class="registerContainer">
+        <div id="simpleModal" class="modal">
+            <div class="modal__contents">
+                <div class="modalHeader">
+                    <span class="modal__close_bar">&times;</span>  
                 </div>
-            </section> 
-            <!-- FRIENDS LIST - END -->
+                <div class="allFields">
+                    <form>
+                        <fieldset class="registrationLabels">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" class="email" placeholder="Email">
+                        </fieldset>    
+                        <fieldset class="registrationLabels">
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" id="username1" class="username" placeholder="Username">
+                        </fieldset>
+                        <fieldset class="registrationLabels">  
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password1" class="password" placeholder="Password">
+                        </fieldset>
+                        <fieldset class="registrationLabels">
+                            <label for="username">Retype Password</label>
+                            <input type="password" name="password2" id="password2" class="password2" placeholder="Retype Password">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="registerAcct">
+                    <button type="button" id="register" class="blueBtn">Register</button>
+                </div>
             
-        </article>
-    </main>
+        </div>
+    </div>
+
+    </article>
     <!-- <footer>
             <p>Created by The Grave And The Rose</p>
         </footer> -->

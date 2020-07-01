@@ -1,6 +1,7 @@
 import loginCalls from "./loginCalls.js";
 import { API } from "../databaseCalls.js";
-import closeModal from "../login.js"
+import closeModal from "./modal.js";
+import modalFunction from "./modal.js";
 
 //event listeners for buttons on login page
 const loginButtons = {
@@ -32,7 +33,6 @@ register () {
             loginCalls.signUp(newUserObj)
             API.getAllUsers()
             .then(users => {
-                closeModal()
                 console.log(users)
             })
         }
@@ -42,3 +42,4 @@ register () {
 }
 
 export default loginButtons;
+
