@@ -6,10 +6,16 @@ import { API } from "../databaseCalls.js";
 const loginButtons = {
 //if they click login then 
 login () {
+    const contentHidden = document.querySelector(".main__container")
     document.querySelector("#loginButton").addEventListener("click", event =>{
         let username=document.querySelector("#username").value 
         let password=document.querySelector("#password").value
+        let userDisplay = document.querySelector(".userContainer").innerHTML
         loginCalls.login(username,password)
+        console.log(username, password)
+        if (username !== "" && password !== "" && userDisplay !== "") {
+                    contentHidden.style.display = "block";
+        }   
     })
 },
 
