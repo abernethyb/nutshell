@@ -105,4 +105,4 @@ renderFriend()
 console.log("avtive username and ID", activeSession.userneame, activeSession.id)
 
 friendEvent.makeAFriend()
-
+friendEvent.makeFriendGoAway()

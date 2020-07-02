@@ -53,23 +53,23 @@ const friendEvent = {
             }
         })
     
-    }//,
-    // makeFriendGoAway () {
-    //     document.querySelector(".eventOutput").addEventListener("click", event => {
-    //         console.log(event.target.id)
-    //         if (event.target.id.startsWith("deleteEventBtn__")) {
-    //             const eventToDelete = event.target.id.split("__")[1]
-    //              console.log(eventToDelete)
-    //             //url, table, ObjectId
-    //             API.deleteData("http://localhost:3000", "events", eventToDelete).then(
-    //                 () => {
-    //                     document.querySelector(".eventOutput").innerHTML = ""
-    //                     renderEvent()
-    //                 }
-    //             )
-    //         }
-    //     })
-    // }
+    },
+    makeFriendGoAway () {
+        document.querySelector(".friendOutput").addEventListener("click", event => {
+            console.log(event.target.id)
+            if (event.target.id.startsWith("deleteFriend__")) {
+                const friendToDelete = event.target.id.split("__")[1]
+                 console.log(friendToDelete)
+                //url, table, ObjectId
+                API.deleteData("http://localhost:3000", "friends", friendToDelete).then(
+                    () => {
+                        document.querySelector(".friendOutput").innerHTML = ""
+                        renderFriend()
+                    }
+                )
+            }
+        })
+    }
 } 
 
 export default friendEvent
