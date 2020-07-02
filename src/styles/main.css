@@ -50,3 +50,31 @@ body {
     height: auto;
     background-color: #42234d;
 }
+
+.mainContainer {
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 7px;
+    touch-action: none;
+}
+
+.contentContainer__friendsFloat {
+    padding: 20px;
+    touch-action: none;
+    user-select: none;
+}
+
+.contentContainer__friendsFloat:active {
+    background-color: #a86628;
+}
+
+.contentContainer__friendsFloat:hover {
+    cursor: pointer;
+    border-width: 20px;
+}
+
