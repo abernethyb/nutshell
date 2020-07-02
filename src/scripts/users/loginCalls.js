@@ -1,6 +1,7 @@
 
 import {API} from "../databaseCalls.js";
 import renderUser from "./userRender.js";
+import renderMessageUser from "../messages/composeRender.js"
 
 let activeSession = {}
 
@@ -10,11 +11,13 @@ const loginCalls = {
         .then (users => {
             users.find(user => {
                 if(user.password === password && user.username === username) {
+                    sessionStorage.removeItem('user');
                     sessionStorage.setItem('user', JSON.stringify(user))
                     console.log(sessionStorage.getItem('user', user))
                     activeSession = user
                     $(".userContainer").empty()
                     renderUser(user)
+                    renderMessageUser(user)
                     console.log('ACTIVE USER', activeSession)
                 }
             })

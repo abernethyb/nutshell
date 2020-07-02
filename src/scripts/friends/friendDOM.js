@@ -13,7 +13,7 @@ const renderFriend = () => {
                         document.querySelector(".friendOutput").innerHTML += `
                         <div id="friend__${res.id}" class="singleFriend">
             <div class="friend__userDetails">
-                <img class="friend__userImage" src="/images/userIcon.png">
+                <img class="friend__userImage" src="${res.user.image}">
                 <div class="friend__name">
                     ${res.user.username}
                 </div>
