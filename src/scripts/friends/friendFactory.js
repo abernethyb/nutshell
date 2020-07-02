@@ -1,5 +1,5 @@
 //This module was created by Brenda Abernethy
-//userId, title, location, date
+//userId, activeUserId
 const newFriend = (userId, activeUserId) => ({
     userId: userId,
     activeUserId: activeUserId
