@@ -45,9 +45,6 @@ const friendEvent = {
                 () => {
                 document.querySelector(".friendOutput").innerHTML = ""
                 renderFriend()
-                //    document.querySelector(".eventValue1").value = ''
-                //    document.querySelector(".eventValue2").value = ''
-                //    document.querySelector(".eventValue3").value = ''
                 }
             )
             }

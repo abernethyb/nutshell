@@ -1,7 +1,5 @@
-
 import sendButton from "./messages/sendButton.js"
 import messageButtons from "./messages/messageOptions.js"
-import renderArticle from "./articles/articleDOM.js"
 import articleEvent from "./articles/articleEventListeners.js"
 import modalFunction from "./users/modal.js"
 import loginButtons from "./users/loginButtons.js"
@@ -12,6 +10,7 @@ import eventEvent from "./events/eventEventListeners.js"
 import renderFriend from "./friends/friendDOM.js"
 import { activeSession } from "./users/loginCalls.js"
 import friendEvent from "./friends/friendEventListeners.js"
+
 
 
 // MESSAGE FUNCTIONS
@@ -28,9 +27,6 @@ taskData.getAllTasks()
 taskEvent.deleteTask()
 
 // ARTICLE FUNCTIONS
-//renderArticle is located in articleDom.js.  It is a function that iterates through the articles table in the database and renders them to the DOM
-// renderArticle()
-
 //articleEvent is located in articleEventListener.js.  Write article is used to post an article and delete is used to delete.
 articleEvent.writeArticle()
 articleEvent.deleteArticle()
@@ -40,10 +36,7 @@ eventEvent.writeEvent()
 eventEvent.deleteEvent()
 
 
-// TEST CONSOLE LOGS
-// console.log('Active User Id', activeUserId)
-
-
+// CLICK AND DRAG FRIENDS LIST
 var dragItem = document.querySelector(".contentContainer__friendsFloat");
 var container = document.querySelector(".mainContainer");
 

@@ -152,5 +152,10 @@ sup {
     font-size: 13px;
 }
 
-
+.logout {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    color: #a86628;
+}
 

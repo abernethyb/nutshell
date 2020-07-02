@@ -81,3 +81,9 @@
     padding-top: 0px;
     font-size: 14px;
 }
+
+.eventValue1,
+.eventValue2,
+.eventValue3 {
+    width: 98%;
+}
