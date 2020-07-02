@@ -1,7 +1,7 @@
 .contentContainer__left {
-    /* position: relative; */
+    position: relative;
     height: 100%;
-    /* top: -60px; */
+    top: -90px;
 }
 
 #sidebar {
@@ -34,7 +34,7 @@
 .user__userName {
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0px;
     color: white;
     font-family: 'open sans', sans-serif
 }
@@ -52,13 +52,20 @@ sup {
 
 #taskContainer {
     margin-top: 20px;
-     background-color: #373737;
+    background-color: #373737;
     height: 100%;
+    width: 100%;
     box-shadow: 2px 2px 4px #302e2ece;
 }
 
+.taskLabel {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: whitesmoke;
+}
+
 .taskTitle > h3 {
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 0 10px;
     color: whitesmoke;
 }
 
@@ -68,16 +75,21 @@ sup {
 
 .fieldLabel {
     color: whitesmoke;
+    margin-bottom: 0;
+}
+
+.taskValue2 {
+    margin-top: 0;
 }
 
 #taskDate {
     margin-bottom: 10px;
 }
 
-.field > textarea {
-    margin: 0;
-    padding: 0 0 10px 0;
-    width: 100%
+.taskField {
+    margin-top: 0;
+    padding-top: 0;
+
 }
 
 .createTask__saveBtn {
@@ -98,7 +110,8 @@ sup {
     flex-direction: row;
     text-align: right;
     justify-content: space-between;
-    padding: 3px 10px;
+    padding: 0;
+    background-color: #a86628;
 }
 
 .completeBy > p {
@@ -107,12 +120,15 @@ sup {
     font-style: italic;
     padding: 0;
     margin: 5px 0;
+    padding-left: 5px;
+    color: whitesmoke
 }
 
 .taskDeleteButton {
     color: grey;
     font-style: bold;
     text-align: right;
+    margin-right: 5px;
 }
 
 .taskBody {
@@ -123,11 +139,12 @@ sup {
 
 .task__checkbox {
     margin-right: 5px;
+    margin-top: 3px;
 }
 
 .task__description {
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 .task__description > h3 {

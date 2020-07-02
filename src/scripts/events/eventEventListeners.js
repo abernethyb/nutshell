@@ -23,14 +23,17 @@ const eventEvent = {
     writeEvent () {
         document.querySelector("#saveEvent").addEventListener("click", event => {
             //userId, title, description, url, date
-        
+            
             let inputfromEventequery = eventInput()
             // console.log(inputfromEventequery)
         
             API.postData("http://localhost:3000", "events", inputfromEventequery).then(
                 () => {
-                    document.querySelector(".eventOutput").innerHTML = ""
+                document.querySelector(".eventOutput").innerHTML = ""
                    renderEvent()
+                   document.querySelector(".eventValue1").value = ''
+                   document.querySelector(".eventValue2").value = ''
+                   document.querySelector(".eventValue3").value = ''
                 }
             )
         

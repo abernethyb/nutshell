@@ -12,38 +12,38 @@
 
     
     <!-- BANNER ELEMENT CONTAINER -->
-
+    <div class="bigLogo">
+        <img src="./images/nutshellMain.png">
+    </div>
     <article id="bannerContainer">
-            <img src="./images/banner.jpg">
-            <div class="loginContainer">
-                <div class="loginFields">
-                    <div class="inputFields">
-                        <form class="loginInputs"> 
-                            <!-- username field -->
-                            <fieldset>
-                                <label for="username">Username:</label><br> 
-                                <input type="text" name="username" id="username" class="username" placeholder="Username">
-                            </fieldset>
-                            <!-- password field -->
-                            <fieldset>
-                                <label for="password">Password:</label><br>
-                                <input type="password" name="password" id="password" class="password" placeholder="Password">
-                            </fieldset>
-                        </form>
-                    </div>
-                    <div class="loginButtonContainer">
-                        <div class="loginButtons">
-                            <button type="button" class="userBtn" id="registrationButton">Register</button>
-                            <button type="button" id="loginButton" class="userBtn">Sign in</button>
-                        </div>
+        <img src="./images/banner.jpg">
+        <div class="loginContainer">
+            <div class="loginFields">
+                <div class="inputFields">
+                    <form class="loginInputs"> 
+                        <!-- username field -->
+                        <fieldset>
+                            <label for="username">Username:</label><br> 
+                            <input class="usernameValue" type="text" name="username" id="username" class="username" placeholder="Username">
+                        </fieldset>
+                        <!-- password field -->
+                        <fieldset>
+                            <label for="password">Password:</label><br>
+                            <input class="passwordValue" type="password" name="password" id="password" class="password" placeholder="Password">
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="loginButtonContainer">
+                    <div class="loginButtons">
+                        <button type="button" class="userBtn" id="registrationButton">Register</button>
+                        <button type="button" id="loginButton" class="userBtn">Sign in</button>
                     </div>
                 </div>
             </div>
-        <div class="bannerLogoContainer">
-            <div class="banner__logo">
-                <img src="./images/myNutshell.png">
-            </div>
         </div>
+        <!-- <div class="bigLogo">
+            <img src="./images/nutshellMain.png">
+        </div> -->
         
     </article>
 
@@ -53,6 +53,11 @@
         <section class="contentContainer__left">
             <!-- SIDEBAR -->
             <div id="sidebar">
+                <div class="bannerLogoContainer">
+                    <div class="banner__logo">
+                        <img src="./images/myNutshell.png">
+                    </div>
+                </div>
                 <div class="userContainer">
 
                 </div>
@@ -66,15 +71,15 @@
                                     <label for="date">Complete By</label>
                                 </div>
                                 <div class="field">
-                                    <input type="date" name="taskDate" id="taskDate">
+                                    <input class="taskValue1" type="date" name="taskDate" id="taskDate">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="fieldLabel">
-                                    <label for="taskTitle">Task</label>
+                                    <label for="taskLabel">Task</label>
                                 </div>
                                 <div class="field">
-                                    <textarea id="taskTitle" name="taskName" placeholder="Write Here..."></textarea>
+                                    <textarea class="taskValue2" id="taskTitle" name="taskName" placeholder="Write Here..."></textarea>
                                 </div>
                             </div>
                         <div class="createTask__saveBtn">
@@ -148,7 +153,7 @@
                                     <label for="url">Article URL</label>
                                 </div>
                                 <div class="articleField">
-                                    <input type="text" name="url" placeholder="Write Here..." id="url">
+                                    <input class="articleValue1" type="text" name="url" placeholder="Write Here..." id="url">
                                 </div>
                             </div>
                         
@@ -157,7 +162,7 @@
                                     <label for="concepts">Title</label>
                                 </div>
                                 <div class="articleField">
-                                    <input type="text" name="articleTitle" placeholder="Write Here..." id="articleTitle">
+                                    <input class="articleValue2" type="text" name="articleTitle" placeholder="Write Here..." id="articleTitle">
                                 </div>
                             </div>
                         
@@ -166,7 +171,7 @@
                                     <label for="synopsis">Synopsis</label>
                                 </div>
                                 <div class="articleField">
-                                    <textarea id="synopsis" name="synopsis" placeholder="Write Here..."></textarea>
+                                    <textarea id="synopsis" class="articleValue3" name="synopsis" placeholder="Write Here..."></textarea>
                                 </div>
                             </div>
                             
@@ -197,7 +202,7 @@
                                 <label for="eventName">Event Name</label>
                             </div>
                             <div class="eventInput">
-                                <input type="text" name="eventName" placeholder="Write Here..." id="eventName">
+                                <input class="eventValue1" type="text" name="eventName" placeholder="Write Here..." id="eventName">
                             </div>
                         </div>
                     
@@ -206,7 +211,7 @@
                                 <label for="eventDate">Date</label>
                             </div>
                             <div class="eventInput">
-                                <input type="text" name="eventDate" id="eventDate" placeholder="YYYYMMDD">
+                                <input class="eventValue2" type="text" name="eventDate" id="eventDate" placeholder="YYYYMMDD">
                                 
                             </div>
                         </div>
@@ -216,7 +221,7 @@
                                 <label for="eventLocation">Location</label>
                             </div>
                             <div class="eventInput">
-                                <input type="text" name="eventLocation" placeholder="Write Here..." id="eventLocation">
+                                <input class="eventValue3" type="text" name="eventLocation" placeholder="Write Here..." id="eventLocation">
                             </div>
                         </div>
                         

@@ -37,6 +37,8 @@ const taskEvent = {
                 // Then reloads container with updated data
                 $('.taskLog').empty()
                 taskData.getAllTasks()
+                document.querySelector(".taskValue1").value = ''
+                document.querySelector(".taskValue2").value = ''
             })
 
         })
