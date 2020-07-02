@@ -1,24 +1,33 @@
 {
     "users": [
       {
-        "username": "Bob Robertson",
-        "email": "anemailaddress@emailplace.com",
-        "password": "super$ecret@wesom3pas$w0rd",
-        "id": 1
-      },
-      {
-        "username": "Billy Wiliamson",
-        "email": "billy@emailplace.com",
-        "password": "reallybadpassword",
-        "id": 2
-      },
-      {
-        "username": "Jane Janson",
-        "email": "jane@emailplace.com",
-        "password": "tH313e$tp@s$wOrd",
-        "id": 3
-      }
-      
+          "username": "AussholeWyatt",
+          "image": "./images/wyatt.png",
+          "email": "AussholeWyatt@dog.com",
+          "password": "barfdog",
+          "id": 1
+        },
+        {
+          "username": "BoscoStix",
+          "image": "./images/bosco.png",
+          "email": "AussholeBosco@dog.com",
+          "password": "barfdog",
+          "id": 2
+        },
+        {
+          "username": "Barfdog",
+          "image": "./images/dog2.jpg",
+          "email": "barfdog@dog.com",
+          "password": "barfdog",
+          "id": 3
+        },
+        {
+          "email": "dog",
+          "image": "./images/dog1.jpg",
+          "username": "dog",
+          "password": "dog",
+          "id": 4
+        }
     ],
     "friends": [
       {
