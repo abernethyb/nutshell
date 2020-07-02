@@ -1,7 +1,7 @@
 import { loginCalls } from "./loginCalls.js";
-import { API, dbResponseData } from "../databaseCalls.js";
+import { API } from "../databaseCalls.js";
 import messageData from "../messages/messageData.js";
-import { activeSession } from "../users/loginCalls.js";
+import renderArticle from "../articles/articleDOM.js"
 
 
 //event listeners for buttons on login page
@@ -17,7 +17,12 @@ login () {
         console.log(username, password)
         if (username !== "" && password !== "" && userDisplay !== "") {
             contentHidden.style.display = "block";
+            document.querySelector(".usernameValue").value = ''
+            document.querySelector(".passwordValue").value = ''
+            document.querySelector(".loginContainer").innerHTML = ''
+            document.querySelector(".bigLogo").style.display = 'none'
             messageData.getAllMessages()
+            renderArticle()
         }   
     })
 },

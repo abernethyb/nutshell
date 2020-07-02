@@ -21,7 +21,7 @@ const articleEvent = {
     writeArticle () {
         document.querySelector("#saveArticle").addEventListener("click", event => {
             //userId, title, description, url, date
-        
+            
             let inputfromArticlequery = articleInput()
             // console.log(inputfromArticlequery)
         
@@ -29,8 +29,12 @@ const articleEvent = {
                 () => {
                     document.querySelector(".articleOutput").innerHTML = ""
                    renderArticle()
+                   document.querySelector(".articleValue1").value = ''
+                   document.querySelector(".articleValue2").value = ''
+                   document.querySelector(".articleValue3").value = ''
                 }
             )
+            
         
         })
     },

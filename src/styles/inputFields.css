@@ -1,0 +1,37 @@
+input[type=text],
+input[type=search],
+input[type=password],
+input[type=date],
+input[type=email],
+textarea {
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=password]:focus,
+input[type=date]:focus,
+input[type=email]:focus,
+textarea:focus,
+select {
+    outline: none;
+    border: 1px solid #a86628;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#composeEntry {
+    width: 95%;
+    height: 50px;
+    padding: 5px 5px 10px 10px;
+    resize: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
