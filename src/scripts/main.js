@@ -10,6 +10,7 @@ import taskData from "./tasks/taskData.js"
 import renderEvent from "./events/eventDOM.js"
 import eventEvent from "./events/eventEventListeners.js"
 import renderFriend from "./friends/friendDOM.js"
+import { activeSession } from "./users/loginCalls.js"
 
 // MESSAGE FUNCTIONS
 sendButton()
@@ -106,3 +107,4 @@ function setTranslate(xPos, yPos, el) {
 }
 
 renderFriend()
+console.log("avtive username and ID", activeSession.userneame, activeSession.id)
