@@ -1,25 +1,33 @@
+//This module was created by Brendan Abernethy
+import { API, dbResponseData } from "../databaseCalls.js"
 
 
-
-
-const friendConverter = {
-    friendEntry (obj) {
-        const friendHTMLRepresentation = 
-        `
-        <div id="friend__${obj.id}" class="singleFriend">
+//function to render events to DOM
+const renderFriend = () => {
+    //fetch call to get most recent data
+    API.getData("http://localhost:3000", "friends", "user").then(
+    () => {
+            dbResponseData.forEach(
+                (res) => {
+                    // console.log(res)
+                        document.querySelector(".friendOutput").innerHTML += `
+                        <div id="friend__${res.id}" class="singleFriend">
             <div class="friend__userDetails">
                 <img class="friend__userImage" src="/images/userIcon.png">
                 <div class="friend__name">
-                    ${obj.userId}
+                    ${res.user.username}
                 </div>
             </div>
             <div class="friendsList__deleteBtn">
-                <button id="deleteFriend__${obj.id}" class="deleteBtn" type="button">&times;</button>
+                <button id="deleteFriend__${res.id}" class="deleteBtn" type="button">&times;</button>
             </div>
         </div>
-        `
-        return friendHTMLRepresentation
-    }
-}
+                    
+                    `
+                        }
+                    )
 
-export default friendConverter;
+                }
+            )
+}
+export default renderFriend

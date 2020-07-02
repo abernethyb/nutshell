@@ -44,7 +44,7 @@ const renderMessage = (messages) => {
             chatLog.innerHTML += 
             `
             <div id="chat__${obj.id}" class="singleChat">
-                    <div class="userId" value="${obj.userId}"> </div>
+                    <div class="userId" id="theUsresId" value="${obj.userId}"> </div>
                     <div class="chatFloat__left">
                         <div class="chat__profilePicture">
                             <img class="chat__userImage" src="${obj.user.image}">
@@ -66,6 +66,9 @@ const renderMessage = (messages) => {
                             <div class="chatDate__container">
                                 <p class="chatDate__text">${obj.date}</p>
                             </div>
+                            <div class="addFriend">
+                                <button id="saveFriend__${obj.userId}" class="blueBtn" type="button">+ Friend</button>
+                             </div>
                         </div>
                     </div>
                 </div>

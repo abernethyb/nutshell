@@ -9,6 +9,10 @@ import taskEvent from "./tasks/taskEventListeners.js"
 import taskData from "./tasks/taskData.js"
 import renderEvent from "./events/eventDOM.js"
 import eventEvent from "./events/eventEventListeners.js"
+import renderFriend from "./friends/friendDOM.js"
+import { activeSession } from "./users/loginCalls.js"
+import friendEvent from "./friends/friendEventListeners.js"
+
 
 // MESSAGE FUNCTIONS
 sendButton()
@@ -103,3 +107,9 @@ function drag(e) {
 function setTranslate(xPos, yPos, el) {
     el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
 }
+
+renderFriend()
+console.log("avtive username and ID", activeSession.userneame, activeSession.id)
+
+friendEvent.makeAFriend()
+friendEvent.makeFriendGoAway()
