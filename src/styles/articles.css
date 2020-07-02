@@ -16,6 +16,7 @@
     margin: 0 0 5px 0;
     color: #373737;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .article__addNew {
@@ -79,9 +80,14 @@
     box-shadow: 2px 2px 4px #302e2ece;
     padding: 5px;
     width: 30%;
-    height: 210px;
+    height: 250px;
     margin: 0 15px 15px 0;
     flex: 0 0 30%
+}
+
+.nameDate {
+    display: flex;
+    flex-direction: column;
 }
 
 .friendArticle {
@@ -89,7 +95,7 @@
     box-shadow: 2px 2px 4px #302e2ece;
     padding: 5px;
     width: 30%;
-    height: 210px;
+    height: 250px;
     margin: 0 15px 15px 0;
     flex: 0 0 30%
 }
@@ -102,7 +108,7 @@
 }
 
 .article__user {
-    font-size: 14px;
+    font-size: 18px;
     color: #42234d;
     font-weight: bold;
     padding-top: 5px;
@@ -111,24 +117,22 @@
 .article__date {
     font-size: 12px;
     font-style: italic;
-    padding-top: 5px;
+    padding-top: 0;
     padding-right: 10px;
 }
 
 .article__delete {
     color: red;
     font-weight: bold;
+    padding-top: 5px;
 }
 
 .articleTitle > h3 {
     padding-left: 10px;
-    margin: 20px 0 3px 0;
-}
-
-.articleTitle > h3 {
+    margin: 10px 5px 3px 0;
     color: Black;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.3em;
 }
 .articleTitle > h3 > a {

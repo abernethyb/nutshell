@@ -74,12 +74,14 @@
 <!-- ARTICLE HTML DISPLAY -->
 <div id="article__${obj.id}" class="singleArticle">
     <div class="article__header">
-        <div class="article__user">
+        <div class="nameDate">
+            <div class="article__user">
             ${obj.users.username}
-        </div>
-        <div class="article__date">
-            ${obj.date}
-        </div>
+            </div>
+            <div class="article__date">
+                ${obj.date}
+            </div>
+        </div>        
         <div class="article__deleteButton">
             <button id="deleteArticle__${obj.id}" class="deleteBtn" type="button">&times;</button>
         </div>
