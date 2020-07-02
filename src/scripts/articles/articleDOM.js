@@ -15,19 +15,21 @@ const renderArticle = () => {
                 `
                 <div id="article__${res.id}" class="userArticle">
                     <div class="article__header">
-                        <div class="article__user">
-                            ${res.user.username}
-                        </div>
-                        <div class="article__date">
-                        ${res.date}
-                        </div>
+                        <div class="nameDate">
+                            <div class="article__user">
+                                ${res.user.username}
+                            </div>
+                            <div class="article__date">
+                            ${res.date}
+                            </div>
+                        </div>    
                         <div class="article__deleteButton">
                             <button id="deleteArticleBtn__${res.id}" class="deleteBtn" type="button">&times;</button>
                         </div>
                     </div>
                     <div class="articleTitle">
                         <h3>
-                            <a href="${res.url}" alt="${res.title}">${res.title}</a>
+                            <a href="${res.url}" alt="${res.title}" target="_blank">${res.title} </a>
                         </h3>
                     </div>
                     <div class="article__description">
@@ -41,16 +43,18 @@ const renderArticle = () => {
                 `
                 <div id="article__${res.id}" class="friendArticle">
                     <div class="article__header">
-                        <div class="article__user">
+                        <div class="nameDate">
+                            <div class="article__user">
                             ${res.user.username}
-                        </div>
-                        <div class="article__date">
-                        ${res.date}
+                            </div>
+                            <div class="article__date">
+                                ${res.date}
+                            </div>
                         </div>
                     </div>
                     <div class="articleTitle">
                         <h3>
-                            <a href="${res.url}" alt="${res.title}">${res.title}</a>
+                            <a href="${res.url}" alt="${res.title}" target="_blank">${res.title} </a>
                         </h3>
                     </div>
                     <div class="article__description">

@@ -35,7 +35,7 @@
 .singleEvent {
     background-color: whitesmoke;
     margin: 10px;
-    padding: 5px;
+    
 }
 
 .event__header {
@@ -45,18 +45,29 @@
 }
 
 .event__name {
-    border-bottom: 1px solid #42234d;
-    margin: 0 10px 0px 10px;
+    background-color: #42234d;
+    margin: 0;
+    padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .event__name > h4 {
-    color: black;
-    margin: 10px 0 0 0;
+    color: whitesmoke;
+    margin: 0;
     font-size: 20px;
-    text-shadow: 1px 1px #9a50b4;
+}
+
+.event__details > dl {
+    padding: 0px 5px 20px 5px;
+}
+
+.event__details > dl > dt:first-child {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 0 0px 10px;
+    margin: 0;
 }
 
 .event__details > dl > dt {
