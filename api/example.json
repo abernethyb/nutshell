@@ -1,32 +1,25 @@
 {
     "users": [
       {
-          "username": "AussholeWyatt",
+          "username": "dog1",
           "image": "./images/wyatt.png",
           "email": "AussholeWyatt@dog.com",
           "password": "barfdog",
           "id": 1
         },
         {
-          "username": "BoscoStix",
+          "username": "dog2",
           "image": "./images/bosco.png",
           "email": "AussholeBosco@dog.com",
           "password": "barfdog",
           "id": 2
         },
         {
-          "username": "Barfdog",
+          "username": "dog3",
           "image": "./images/dog2.jpg",
           "email": "barfdog@dog.com",
           "password": "barfdog",
           "id": 3
-        },
-        {
-          "email": "dog",
-          "image": "./images/dog1.jpg",
-          "username": "dog",
-          "password": "dog",
-          "id": 4
         }
     ],
     "friends": [
