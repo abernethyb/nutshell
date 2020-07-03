@@ -36,9 +36,3 @@ For reference of what the database should look like, see "example.json" in the A
 ## Authors and Acknowledgements
 
 The Creators of this dashboard are: Chad Jones, Erik Lindstrom, Brendan Abernethy, Rob Mixon. Contributions were made form Madi Peper and Brenda Long. 
-
-
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
