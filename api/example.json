@@ -3,22 +3,22 @@
       {
           "username": "dog1",
           "image": "./images/wyatt.png",
-          "email": "AussholeWyatt@dog.com",
-          "password": "barfdog",
+          "email": "dog1@dog.com",
+          "password": "dog",
           "id": 1
         },
         {
           "username": "dog2",
           "image": "./images/bosco.png",
-          "email": "AussholeBosco@dog.com",
-          "password": "barfdog",
+          "email": "dog2@dog.com",
+          "password": "dog",
           "id": 2
         },
         {
           "username": "dog3",
           "image": "./images/dog2.jpg",
-          "email": "barfdog@dog.com",
-          "password": "barfdog",
+          "email": "dog3@dog.com",
+          "password": "dog",
           "id": 3
         }
     ],
